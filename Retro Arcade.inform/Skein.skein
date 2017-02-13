@@ -11,46 +11,47 @@ As you walk up to the old, abandoned building on Elk Street, a chill runs down y
 
 Retro Arcade
 An Interactive Fiction by Aaron Murai
-Release 1 / Serial number 170210 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170213 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Outside
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1505"></child>
-            <child nodeId="node-1501"></child>
+        <children><child nodeId="node-1007"></child>
+            <child nodeId="node-1014"></child>
+            <child nodeId="node-1003"></child>
         </children>
     </item>
-    <item nodeId="node-1501">
+    <item nodeId="node-1003">
         <command xml:space="preserve">x me</command>
-        <result xml:space="preserve">You 
+        <result xml:space="preserve">You are curious to see what lies in the abandoned building.  You brought your trusty camera, a pencil and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1502"></child>
+        <children><child nodeId="node-1004"></child>
         </children>
     </item>
-    <item nodeId="node-1502">
+    <item nodeId="node-1004">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1503"></child>
+        <children><child nodeId="node-1005"></child>
         </children>
     </item>
-    <item nodeId="node-1503">
+    <item nodeId="node-1005">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">
 Hockey Table
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1504"></child>
+        <children><child nodeId="node-1006"></child>
         </children>
     </item>
-    <item nodeId="node-1504">
+    <item nodeId="node-1006">
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Main Arcade Room
@@ -58,7 +59,179 @@ Main Arcade Room
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1505">
+    <item nodeId="node-1014">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1017"></child>
+        </children>
+    </item>
+    <item nodeId="node-1017">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1018"></child>
+        </children>
+    </item>
+    <item nodeId="node-1018">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1019"></child>
+        </children>
+    </item>
+    <item nodeId="node-1019">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1020"></child>
+        </children>
+    </item>
+    <item nodeId="node-1020">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1021"></child>
+        </children>
+    </item>
+    <item nodeId="node-1021">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1022"></child>
+        </children>
+    </item>
+    <item nodeId="node-1022">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1023"></child>
+        </children>
+    </item>
+    <item nodeId="node-1023">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Hockey Table
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1024"></child>
+        </children>
+    </item>
+    <item nodeId="node-1024">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1025"></child>
+        </children>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Party Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1029"></child>
+        </children>
+    </item>
+    <item nodeId="node-1029">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1030"></child>
+        </children>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">kms</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1031"></child>
+        </children>
+    </item>
+    <item nodeId="node-1031">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">You are curious to see what lies in the abandoned building.  You brought your trusty camera, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1007">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying:
   Pencil
@@ -66,10 +239,10 @@ Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1511"></child>
+        <children><child nodeId="node-1008"></child>
         </children>
     </item>
-    <item nodeId="node-1511">
+    <item nodeId="node-1008">
         <command xml:space="preserve">eat pencil</command>
         <result xml:space="preserve">That's plainly inedible.
 

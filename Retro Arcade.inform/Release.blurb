@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Users/amurai18/Desktop/Classes/Computer Science/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/amurai18/Desktop/Retro-Arcade/Retro Arcade.inform/Build/StatusCblorb.html"
+status "/Users/amurai18/Desktop/Classes/Computer Science/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/amurai18/Desktop/Retro-Arcade/Retro Arcade.inform"
-release to "/Users/amurai18/Desktop/Retro-Arcade/Retro Arcade.materials/Release"
+project folder "/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.inform"
+release to "/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Retro Arcade.gblorb"
-storyfile "/Users/amurai18/Desktop/Retro-Arcade/Retro Arcade.inform/Build/output.ulx" include
-ifiction "/Users/amurai18/Desktop/Retro-Arcade/Retro Arcade.inform/Metadata.iFiction" include
+storyfile "/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.inform/Build/output.ulx" include
+ifiction "/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.inform/Metadata.iFiction" include
 cover "/Users/amurai18/Desktop/Classes/Computer Science/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Users/amurai18/Desktop/Classes/Computer Science/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 
