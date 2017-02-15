@@ -68,10 +68,29 @@ Pager is an object in Main Arcade Room.
 [Arcade Machines]
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
-	The printed name of Machine1 is "Pac-Man Machine".
+	Understand "Pac Man" as Machine1.
+	The printed name of Machine1 is "Pac-Man".
 	Machine1 is fixed in place.
 	Machine1 is not edible.  
-	The description of Machine1 is "A classic Pac-Man Machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?".
+	The description of Machine1 is "A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?".
+	
+Machine2 is an object in Main Arcade Room.
+	The printed name of Machine2 is "Space Invaders".
+	Machine2 is fixed in place.
+	Machine2 is not edible.
+	The description of Machine2 is "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop.  The control pad seems to be faded and dusty.  Nothing special seems to stick out.".
+	
+Machine3 is an object in Main Arcade Room.
+	The printed name of Machine3 is "Donkey Kong".
+	Machine3 is fixed in place.
+	Machine3 is not edible.
+	The description of Machine3 is "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors really seem to pop off the machine.  Impressive for a game released in 1981.  Nothing special seems to stick out.".
+	
+Machine4 is an object in Main Arcade Room.
+	The printed name of Machine4 is "Tetris".
+	Machine4 is fixed in place.
+	Machine4 is not edible.
+	The description of Machine4 is "One of the most recognizable games.".
 	
 
 Bathroom is west of Main Arcade Room.
