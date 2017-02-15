@@ -16,7 +16,7 @@ To say exit list:
 
 [Start Descriptions and Inventory]
 
-The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty camera, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
+The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
 
 When game begins:
 	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.".
@@ -26,31 +26,37 @@ When game begins:
 	Notepad is an object.
 		Player is carrying Notepad.
 		The description of notepad is "Your trusty notepad that you have used over the past year.  It's riddled with sketches, doodles, and useless notes from stories that didn't make the website.  But, things will change with this story!".
-	Camera is an object.
-		Player is carrying Camera.
-		The description of camera is "An old but trusty Nikon camera.".
-
+	Phone is an object.
+		Player is carrying Phone.
+		The description of Phone is "An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.".
 
 [Rooms]
 
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
-	The description of spawn is "".
+	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone ".
 Spawn is south of Main Arcade Room.
 
-[First Puzzle with Quarter]
-Quarter is undescribed.
-	The description of Quarter is "A normal quarter used to play games.".
-	The Quarter unlocks the Hockey Table.
-	The Quarter is not edible.
-	Quarter is on top of Machine1.
-[Gives a clue as to where quarter is]
-Controls is an object.
-	Controls is on top of Machine1.
-	Controls is fixed in place.
-	Controls is not edible.
-	The description of Controls is "It's used to control Pac-Man.  There is a dusty quarter next to it.".
+[Pager is a NPC]
+Pager is an object in Main Arcade Room.
+	Pager is not edible. 
+	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abonded arcade.  Nevertheless, it seems useful.  Might as well take it.".
 
+[First Puzzle with Quarter]
+	Quarter is undescribed.
+		The description of Quarter is "A normal quarter used to play games.".
+		The Quarter unlocks the Hockey Table.
+		The Quarter is not edible.
+		Quarter is on top of Machine1.
+
+[Gives a clue as to where quarter is]
+	Controls is an object.
+		Controls is on top of Machine1.
+		Controls is fixed in place.
+		Controls is not edible.
+		The description of Controls is "It's used to control Pac-Man.  There is a dusty quarter next to it.".
+
+[Arcade Machines]
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	The printed name of Machine1 is "Pac-Man Machine".
@@ -65,10 +71,11 @@ Party Room is east of Main Arcade Room.
 
 Hockey Table Room is northwest of Main Arcade Room.
 
-The Hockey Table is a container.
-	The Hockey Table is in the Hockey Table Room.
-	The Hockey Table is locked.
-	The Hockey Table is fixed in place.
+[Hockey Table]
+	The Hockey Table is a container.
+		The Hockey Table is in the Hockey Table Room.
+		The Hockey Table is locked.
+		The Hockey Table is fixed in place.
 
 Food Counter is northeast of Main Arcade Room.
 
