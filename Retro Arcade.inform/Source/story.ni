@@ -11,7 +11,16 @@ To say exit list:
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
 
-[Possible Point System]
+[Scoring System]
+Use scoring.
+The target score is a number variable.  The target score is 10.
+	The maximum score is 10.
+	Use the serial comma.
+
+After taking the pager for the first time:
+	increase score by 1;
+	say "Looks like it will help you along the way.  Keep it if you need hints.".
+	
 
 
 [Start Descriptions and Inventory]
