@@ -19,12 +19,15 @@ The target score is a number variable.  The target score is 10.
 
 After taking the pager for the first time:
 	increase score by 1;
-	say "Looks like it will help you along the way.  Keep it if you need hints.".
+	say "Looks like it will help you along the way.  You should keep it if you need hints.".
+
+After taking quarter for the first time:
+	increase score by 1;
+	say "Well done.  Now find the hockey puck and turn on the power.".
 	
 
 
 [Start Descriptions and Inventory]
-
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
 
 When game begins:
@@ -38,13 +41,41 @@ When game begins:
 	Phone is an object.
 		Player is carrying Phone.
 		The description of Phone is "An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.".
+	Flashlight is an object.
+		Player is carrying Flashlight.
+		The description of Flashlight is "The flashlight from your phone.".
 
 [Rooms]
-
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
-	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone ".
+	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and find out whats inside.".
 Spawn is south of Main Arcade Room.
+	The description of Main Arcade Room is "".
+
+Bathroom is west of Main Arcade Room. 
+	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
+
+Party Room is east of Main Arcade Room.
+	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
+
+Hockey Table Room is northwest of Main Arcade Room.
+	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
+
+[Hockey Table]
+Table1 is a container.
+	The printed name of Table1 is "Air Hockey Table".
+	Table1 is in the Hockey Table Room.
+	The Table1 is locked.
+	The Table1 can be unlocked.
+	The Table1 is fixed in place.
+	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
+
+Food Counter is northeast of Main Arcade Room. 
+	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
+
+Back Alley is northeast of Hockey Table Room.
+Back Alley is northwest of Food Counter.
+	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak past garbage cans and cardboard boxes.".
 
 [Pager is a NPC]
 Pager is an object in Main Arcade Room.
@@ -52,18 +83,19 @@ Pager is an object in Main Arcade Room.
 	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abonded arcade.  Nevertheless, it seems useful.  Might as well take it.".
 
 [First Puzzle with Quarter]
-	Quarter is undescribed.
-		The description of Quarter is "A normal quarter used to play games.".
-		The Quarter unlocks the Hockey Table.
-		The Quarter is not edible.
-		Quarter is on top of Machine1.
+Quarter is undescribed.
+	The description of Quarter is "A normal quarter used to play games.".
+	The Quarter unlocks Table1.
+	The Quarter is not edible.
+	Quarter is on top of Machine1.
 
 [Gives a clue as to where quarter is]
-	Controls is an object.
-		Controls is on top of Machine1.
-		Controls is fixed in place.
-		Controls is not edible.
-		The description of Controls is "It's used to control Pac-Man.  There is a dusty quarter next to it.".
+Controls is an object.
+	Controls is on top of Machine1.
+	Controls is fixed in place.
+	Controls is not edible.
+	Controls is undescribed.
+	The description of Controls is "It's used to control Pac-Man.  There is a dusty quarter next to it.".
 
 [Arcade Machines]
 Machine1 is an object in Main Arcade Room.  
@@ -90,26 +122,8 @@ Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
 	Machine4 is fixed in place.
 	Machine4 is not edible.
-	The description of Machine4 is "One of the most recognizable games.".
+	The description of Machine4 is "One of the most recognizable games.  On the side, there seems to be a ".
 	
-
-Bathroom is west of Main Arcade Room.
-
-Party Room is east of Main Arcade Room.
-
-Hockey Table Room is northwest of Main Arcade Room.
-
-[Hockey Table]
-	The Hockey Table is a container.
-		The Hockey Table is in the Hockey Table Room.
-		The Hockey Table is locked.
-		The Hockey Table is fixed in place.
-
-Food Counter is northeast of Main Arcade Room.
-
-Back Alley is northeast of Hockey Table Room.
-
-Back Alley is northwest of Food Counter.
 
 
 
