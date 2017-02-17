@@ -1,7 +1,7 @@
 "Retro Arcade" by Aaron Murai
 
 
-[Navigation]
+[Navigation from Get that Cat]
 When play begins: 
 	now left hand status line is "Exits: [exit list]"; 
       now right hand status line is "[location]".
@@ -22,14 +22,13 @@ After taking the pager for the first time:
 	say "Looks like it will help you along the way.  You should keep it if you need hints.".
 
 After taking quarter for the first time:
-	increase score by 1;
-	say "Well done.  Now find the hockey puck and turn on the power.".
+	increase score by 1.
 	
 
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
-
+[Prolouge]
 When game begins:
 	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.".
 	Pen is an object.
@@ -41,16 +40,30 @@ When game begins:
 	Phone is an object.
 		Player is carrying Phone.
 		The description of Phone is "An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.".
-	Flashlight is an object.
+	Flashlight is a device.
 		Player is carrying Flashlight.
 		The description of Flashlight is "The flashlight from your phone.".
+
+[Flashlight and Dark Rooms]
+The flashlight is unlit.
+The flashlight is switched off.
+After switching on flashlight:
+	say "Now you can see!";
+	now flashlight is lit.
+After switching off flashlight:
+	say "Flashlight is now off.";
+	now flashlight is unlit.
 
 [Rooms]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
-	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and find out whats inside.".
+	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!".
 Spawn is south of Main Arcade Room.
-	The description of Main Arcade Room is "".
+	The description of Main Arcade Room is "Large aracde with machines.".
+	The Main Arcade Room is dark.
+
+Rule for printing the announcement of darkness:
+	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should find the power...".
 
 Bathroom is west of Main Arcade Room. 
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
@@ -60,13 +73,20 @@ Party Room is east of Main Arcade Room.
 
 Hockey Table Room is northwest of Main Arcade Room.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
+	
 
 [Hockey Table]
 Table1 is a container.
 	The printed name of Table1 is "Air Hockey Table".
+	Understand "hockey table" as Table1.
+	Understand "table" as Table1.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
+[If player is carrying quarter;
+If player is carrying green paddle;
+If player is carrying blue paddle;
+Then "unlock" hockey table]
 	The Table1 is fixed in place.
 	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
 
@@ -85,7 +105,6 @@ Pager is an object in Main Arcade Room.
 [First Puzzle with Quarter]
 Quarter is undescribed.
 	The description of Quarter is "A normal quarter used to play games.".
-	The Quarter unlocks Table1.
 	The Quarter is not edible.
 	Quarter is on top of Machine1.
 
