@@ -247,7 +247,7 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
     </item>
     <item nodeId="node-1125">
         <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">Now you can see!
+        <result xml:space="preserve">[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -257,15 +257,31 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
     <item nodeId="node-1126">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
-Main Arcade Room
-Large aracde with machines.
-
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1127"></child>
+            <child nodeId="node-1150"></child>
         </children>
+    </item>
+    <item nodeId="node-1150">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">That's already on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1151"></child>
+        </children>
+    </item>
+    <item nodeId="node-1151">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1127">
         <command xml:space="preserve">turn flashlight off</command>
@@ -352,7 +368,7 @@ You can see Pager and Pac-Man Machine (on which is Controls) here.
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Darkness
-It is pitch dark, and you can't see a thing.
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -527,12 +543,90 @@ On Pac-Man Machine is Controls.
     </item>
     <item nodeId="node-1112">
         <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">It isn't something you can switch.
+        <result xml:space="preserve">[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1113"></child>
+        <children><child nodeId="node-1154"></child>
+            <child nodeId="node-1113"></child>
+            <child nodeId="node-1141"></child>
         </children>
+    </item>
+    <item nodeId="node-1141">
+        <command xml:space="preserve">turn off flashlight</command>
+        <result xml:space="preserve">Flashlight is now off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1142"></child>
+        </children>
+    </item>
+    <item nodeId="node-1142">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1143"></child>
+        </children>
+    </item>
+    <item nodeId="node-1143">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should find the power...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1144"></child>
+        </children>
+    </item>
+    <item nodeId="node-1144">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1145"></child>
+        </children>
+    </item>
+    <item nodeId="node-1145">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pen
+  Notepad
+  Phone
+  Flashlight
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1146"></child>
+        </children>
+    </item>
+    <item nodeId="node-1146">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">Now you can see!
+
+Main Arcade Room
+Large aracde with machines.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1147"></child>
+        </children>
+    </item>
+    <item nodeId="node-1147">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">Pager: Looks like it will help you along the way.  You should keep it if you need hints.
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1113">
         <command xml:space="preserve">take all</command>
@@ -559,6 +653,67 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
         <result xml:space="preserve">
 Darkness
 It is pitch dark, and you can't see a thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1154">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1158"></child>
+            <child nodeId="node-1164"></child>
+        </children>
+    </item>
+    <item nodeId="node-1164">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1165"></child>
+        </children>
+    </item>
+    <item nodeId="node-1165">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1158">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1159"></child>
+        </children>
+    </item>
+    <item nodeId="node-1159">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1160"></child>
+        </children>
+    </item>
+    <item nodeId="node-1160">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

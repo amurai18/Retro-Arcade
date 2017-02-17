@@ -23,11 +23,17 @@ After taking the pager for the first time:
 
 After taking quarter for the first time:
 	increase score by 1.
-	
+
+After switching on flashlight for the first time:
+	increase score by 1.
 
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
+
+[Disabling take all]
+Rule for deciding whether all includes something: It does not.
+
 [Prolouge]
 When game begins:
 	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.".
@@ -54,6 +60,15 @@ After switching off flashlight:
 	say "Flashlight is now off.";
 	now flashlight is unlit.
 
+After deciding the scope of the player when the location is the Main Arcade Room:
+	place Main Arcade Room in scope.
+
+[Inform 7 Handbook By Jim Aikin]
+Rule for printing the description of a dark room:
+	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...".
+[Rule for printing the announcement of darkness:
+	say "You can see now!". nneed help]
+
 [Rooms]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
@@ -61,9 +76,6 @@ Spawn is a room.
 Spawn is south of Main Arcade Room.
 	The description of Main Arcade Room is "Large aracde with machines.".
 	The Main Arcade Room is dark.
-
-Rule for printing the announcement of darkness:
-	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should find the power...".
 
 Bathroom is west of Main Arcade Room. 
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
