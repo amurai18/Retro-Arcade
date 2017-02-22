@@ -76,15 +76,18 @@ Carry out switching off flashlight:
 
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
-	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...".
+	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you have a source of light already...".
 
 [Rooms]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
 	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
 Spawn is south of Main Arcade Room.
-	The description of Main Arcade Room is "Large aracde with machines.".
+	The description of Main Arcade Room is "Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
 	The Main Arcade Room is dark.
+
+After player entering Main Arcade Room for the first time:
+	say "This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table.".
 
 Bathroom is west of Main Arcade Room. 
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
