@@ -90,10 +90,12 @@ After player entering Main Arcade Room for the first time:
 	say "This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table.".
 
 Bathroom is west of Main Arcade Room. 
+Bathroom is dark.
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
 
 [Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
+Party Room is dark.
 	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
 	
 Boxes is a thing.
@@ -101,7 +103,6 @@ Boxes is in Party Room.
 Boxes is undescribed.
 Boxes is fixed in place.
 The description of boxes is "A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.".
-
 
 Looking behind is an action applying to one thing and requiring light.
 	Understand "Look behind [something]" as looking behind.
@@ -122,6 +123,7 @@ Instead of looking behind the boxes:
 		say "You found the two missing paddles for the air hockey table.  Go put it on the table.".
 
 Hockey Table Room is northwest of Main Arcade Room.
+Hockey Table Room is dark.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
 	
 [Hockey Table]
@@ -139,10 +141,12 @@ Then "unlock" hockey table]
 	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
 
 Food Counter is northeast of Main Arcade Room. 
+Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
+Back Alley is dark.
 	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans and cardboard boxes.".
 
 [Pager is a NPC]
