@@ -7,7 +7,7 @@
         <result xml:space="preserve">
 
 
-As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80"s.  
+As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80s.  
 Retro Arcade
 An Interactive Fiction by Aaron Murai
 Release 1 / Serial number 170221 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
@@ -32,7 +32,54 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1007"></child>
             <child nodeId="node-1004"></child>
+            <child nodeId="node-1631"></child>
         </children>
+    </item>
+    <item nodeId="node-1631">
+        <command xml:space="preserve">x outside</command>
+        <result xml:space="preserve">You see nothing unexpected in that direction.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1632"></child>
+        </children>
+    </item>
+    <item nodeId="node-1632">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1633"></child>
+        </children>
+    </item>
+    <item nodeId="node-1633">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1634"></child>
+        </children>
+    </item>
+    <item nodeId="node-1634">
+        <command xml:space="preserve">turn of flashlight</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1635"></child>
+        </children>
+    </item>
+    <item nodeId="node-1635">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1004">
         <command xml:space="preserve">n</command>

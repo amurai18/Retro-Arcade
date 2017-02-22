@@ -30,6 +30,15 @@ After switching on flashlight for the first time:
 After taking paddles for the first time:
 	increase score by 1.
 
+[After placing paddles on Hockey table for the first time:
+	increase score by 1.
+
+Placing is an action applying to one thing.
+	Understand "Place [something] on top of [something]" as placing.
+
+After player places paddles on top of hockey table:
+	Remove paddles from inventory;
+		say "Now find the hockey puck.".]
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
@@ -39,7 +48,7 @@ Rule for deciding whether all includes something: It does not.
 
 [Prolouge]
 When game begins:
-	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80's.  ".
+	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80s.".
 	Pen is an object.
 		Player is carrying pen.
 		The description of pen is "A new, ball point pen used for writing down notes.  Don't lose it!".
@@ -77,7 +86,7 @@ Rule for printing the description of a dark room:
 [Rooms]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
-	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!".
+	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
 Spawn is south of Main Arcade Room.
 	The description of Main Arcade Room is "Large aracde with machines.".
 	The Main Arcade Room is dark.
@@ -85,6 +94,7 @@ Spawn is south of Main Arcade Room.
 Bathroom is west of Main Arcade Room. 
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
 
+[Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
 	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
 	
@@ -113,15 +123,9 @@ Instead of looking behind the boxes:
 		now player carries paddles;
 		say "You found the two missing paddles for the air hockey table.  Go put it on the table.".
 
-
-
-
-
-
 Hockey Table Room is northwest of Main Arcade Room.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
 	
-
 [Hockey Table]
 Table1 is a container.
 	The printed name of Table1 is "Air Hockey Table".
@@ -131,8 +135,7 @@ Table1 is a container.
 	The Table1 is locked.
 	The Table1 can be unlocked.
 [If player is carrying quarter;
-If player is carrying green paddle;
-If player is carrying blue paddle;
+If player is carrying paddles;
 Then "unlock" hockey table]
 	The Table1 is fixed in place.
 	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
@@ -142,7 +145,7 @@ Food Counter is northeast of Main Arcade Room.
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
-	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak past garbage cans and cardboard boxes.".
+	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans and cardboard boxes.".
 
 [Pager is a NPC]
 Pager is an object in Main Arcade Room.
@@ -188,7 +191,7 @@ Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
 	Machine4 is fixed in place.
 	Machine4 is not edible.
-	The description of Machine4 is "One of the most recognizable games.".
+	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
 	
 
 
