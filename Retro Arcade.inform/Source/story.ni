@@ -63,21 +63,16 @@ When game begins:
 		The description of Flashlight is "The flashlight from your phone.".
 
 [Flashlight and Dark Rooms]
+A device can be lit or unlit.  A device is usually unlit.
+
 The flashlight is unlit.
 The flashlight is switched off.
-After switching on flashlight:
+Carry out switching on flashlight:
 	say "Now you can see.";
 	now flashlight is lit.
-After switching off flashlight:
+Carry out switching off flashlight:
 	say "Flashlight is now off.";
 	now flashlight is unlit.
-
-[Every turn:
-	If flashlight is lit:
-		room is now lit;
-			say "You can see now!".
-	Otherwise:
-		room is dark.]
 
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
