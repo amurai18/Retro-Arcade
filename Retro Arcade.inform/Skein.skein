@@ -7,21 +7,20 @@
         <result xml:space="preserve">
 
 
-As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.
-
+As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80"s.  
 Retro Arcade
 An Interactive Fiction by Aaron Murai
-Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170221 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Outside
 Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1052"></child>
-            <child nodeId="node-1011"></child>
-            <child nodeId="node-1007"></child>
-            <child nodeId="node-1125"></child>
+        <children><child nodeId="node-1103"></child>
+            <child nodeId="node-1037"></child>
+            <child nodeId="node-1033"></child>
+            <child nodeId="node-1025"></child>
             <child nodeId="node-1003"></child>
         </children>
     </item>
@@ -31,7 +30,7 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1057"></child>
+        <children><child nodeId="node-1007"></child>
             <child nodeId="node-1004"></child>
         </children>
     </item>
@@ -63,7 +62,7 @@ Main Arcade Room
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1057">
+    <item nodeId="node-1007">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying:
   Pen
@@ -73,29 +72,29 @@ Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1060"></child>
+        <children><child nodeId="node-1008"></child>
         </children>
     </item>
-    <item nodeId="node-1060">
+    <item nodeId="node-1008">
         <command xml:space="preserve">use flashlight</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1061"></child>
+        <children><child nodeId="node-1009"></child>
         </children>
     </item>
-    <item nodeId="node-1061">
+    <item nodeId="node-1009">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Outside
 Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside 
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1062"></child>
+        <children><child nodeId="node-1010"></child>
         </children>
     </item>
-    <item nodeId="node-1062">
+    <item nodeId="node-1010">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Arcade Room
@@ -103,10 +102,10 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1068"></child>
+        <children><child nodeId="node-1011"></child>
         </children>
     </item>
-    <item nodeId="node-1068">
+    <item nodeId="node-1011">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">
 Hockey Table Room
@@ -114,12 +113,654 @@ You can see a Hockey Table (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1069"></child>
+        <children><child nodeId="node-1012"></child>
         </children>
     </item>
-    <item nodeId="node-1069">
+    <item nodeId="node-1012">
         <command xml:space="preserve">x hockey talb</command>
         <result xml:space="preserve">I only understood you as far as wanting to examine the Hockey Table.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1013"></child>
+        </children>
+    </item>
+    <item nodeId="node-1013">
+        <command xml:space="preserve">x hockey table</command>
+        <result xml:space="preserve">A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says "25 cents required".
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1014"></child>
+        </children>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Back Alley
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Hockey Table Room
+You can see a Hockey Table (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Main Arcade Room
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1017"></child>
+        </children>
+    </item>
+    <item nodeId="node-1017">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Party Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1018"></child>
+        </children>
+    </item>
+    <item nodeId="node-1018">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1019"></child>
+        </children>
+    </item>
+    <item nodeId="node-1019">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Arcade Room
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1020"></child>
+        </children>
+    </item>
+    <item nodeId="node-1020">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1021"></child>
+        </children>
+    </item>
+    <item nodeId="node-1021">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1022"></child>
+        </children>
+    </item>
+    <item nodeId="node-1022">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1023"></child>
+        </children>
+    </item>
+    <item nodeId="node-1023">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Arcade Room
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1024"></child>
+        </children>
+    </item>
+    <item nodeId="node-1024">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside 
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1029"></child>
+            <child nodeId="node-1027"></child>
+            <child nodeId="node-1109"></child>
+        </children>
+    </item>
+    <item nodeId="node-1109">
+        <command xml:space="preserve">use flashlight</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1113"></child>
+        </children>
+    </item>
+    <item nodeId="node-1113">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Food Counter
+This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, "Food and Drink", and a pizza poster.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1114"></child>
+        </children>
+    </item>
+    <item nodeId="node-1114">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1115"></child>
+        </children>
+    </item>
+    <item nodeId="node-1115">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Hockey Table Room
+This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.
+
+You can see Air Hockey Table (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1116"></child>
+        </children>
+    </item>
+    <item nodeId="node-1116">
+        <command xml:space="preserve">x hockey table</command>
+        <result xml:space="preserve">A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says "25 cents required".
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">That's already on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1029">
+        <command xml:space="preserve">turn flashlight off</command>
+        <result xml:space="preserve">Flashlight is now off.
+
+It is now pitch dark in here!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1030"></child>
+        </children>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1031"></child>
+        </children>
+    </item>
+    <item nodeId="node-1031">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It is pitch dark, and you can't see a thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1032"></child>
+        </children>
+    </item>
+    <item nodeId="node-1032">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">Now you can see!
+
+Main Arcade Room
+Large aracde with machines.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1033">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 1 turn.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1034"></child>
+        </children>
+    </item>
+    <item nodeId="node-1034">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+You can see Pager and Pac-Man Machine (on which is Controls) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1035"></child>
+        </children>
+    </item>
+    <item nodeId="node-1035">
+        <command xml:space="preserve">take pager</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1036"></child>
+        </children>
+    </item>
+    <item nodeId="node-1036">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 3 turns.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1037">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1624"></child>
+            <child nodeId="node-1097"></child>
+            <child nodeId="node-1080"></child>
+            <child nodeId="node-1078"></child>
+            <child nodeId="node-1072"></child>
+            <child nodeId="node-1055"></child>
+            <child nodeId="node-1051"></child>
+            <child nodeId="node-1045"></child>
+            <child nodeId="node-1038"></child>
+        </children>
+    </item>
+    <item nodeId="node-1038">
+        <command xml:space="preserve">x quarter</command>
+        <result xml:space="preserve">A normal quarter used to play games.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1039"></child>
+        </children>
+    </item>
+    <item nodeId="node-1039">
+        <command xml:space="preserve">take quarter</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1040"></child>
+        </children>
+    </item>
+    <item nodeId="node-1040">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Food Counter
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1041"></child>
+        </children>
+    </item>
+    <item nodeId="node-1041">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Main Arcade Room
+You can see Pac-Man Machine here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1042"></child>
+        </children>
+    </item>
+    <item nodeId="node-1042">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Hockey Table Room
+You can see a Hockey Table (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1043"></child>
+        </children>
+    </item>
+    <item nodeId="node-1043">
+        <command xml:space="preserve">unlock hockey table</command>
+        <result xml:space="preserve">What do you want to unlock the Hockey Table with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1044"></child>
+        </children>
+    </item>
+    <item nodeId="node-1044">
+        <command xml:space="preserve">quarter</command>
+        <result xml:space="preserve">You unlock the Hockey Table.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1045">
+        <command xml:space="preserve">x pac-man machine</command>
+        <result xml:space="preserve">A classic Pac-Man Machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+On Pac-Man Machine is Controls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1046"></child>
+        </children>
+    </item>
+    <item nodeId="node-1046">
+        <command xml:space="preserve">look underneath</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1047"></child>
+        </children>
+    </item>
+    <item nodeId="node-1047">
+        <command xml:space="preserve">x pac-man machine</command>
+        <result xml:space="preserve">A classic Pac-Man Machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+On Pac-Man Machine is Controls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1048"></child>
+        </children>
+    </item>
+    <item nodeId="node-1048">
+        <command xml:space="preserve">x joysticks</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1049"></child>
+        </children>
+    </item>
+    <item nodeId="node-1049">
+        <command xml:space="preserve">x controls</command>
+        <result xml:space="preserve">It's used to control Pac-Man.  There is a dusty quarter next to it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1050"></child>
+        </children>
+    </item>
+    <item nodeId="node-1050">
+        <command xml:space="preserve">take quarter</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1051">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1052"></child>
+        </children>
+    </item>
+    <item nodeId="node-1052">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pen
+  Notepad
+  Phone
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1053"></child>
+        </children>
+    </item>
+    <item nodeId="node-1053">
+        <command xml:space="preserve">x phone</command>
+        <result xml:space="preserve">An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1054"></child>
+        </children>
+    </item>
+    <item nodeId="node-1054">
+        <command xml:space="preserve">use flashlight</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1055">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1066"></child>
+            <child nodeId="node-1063"></child>
+            <child nodeId="node-1056"></child>
+        </children>
+    </item>
+    <item nodeId="node-1056">
+        <command xml:space="preserve">turn off flashlight</command>
+        <result xml:space="preserve">Flashlight is now off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1057"></child>
+        </children>
+    </item>
+    <item nodeId="node-1057">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1058"></child>
+        </children>
+    </item>
+    <item nodeId="node-1058">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should find the power...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1059"></child>
+        </children>
+    </item>
+    <item nodeId="node-1059">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1060"></child>
+        </children>
+    </item>
+    <item nodeId="node-1060">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pen
+  Notepad
+  Phone
+  Flashlight
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1061"></child>
+        </children>
+    </item>
+    <item nodeId="node-1061">
+        <command xml:space="preserve">turn on flashlight</command>
+        <result xml:space="preserve">Now you can see!
+
+Main Arcade Room
+Large aracde with machines.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1062"></child>
+        </children>
+    </item>
+    <item nodeId="node-1062">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">Pager: Looks like it will help you along the way.  You should keep it if you need hints.
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1063">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1064"></child>
+        </children>
+    </item>
+    <item nodeId="node-1064">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1065"></child>
+        </children>
+    </item>
+    <item nodeId="node-1065">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It is pitch dark, and you can't see a thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1066">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1069"></child>
+            <child nodeId="node-1067"></child>
+            <child nodeId="node-1125"></child>
+        </children>
+    </item>
+    <item nodeId="node-1125">
+        <command xml:space="preserve">x quarter</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1126"></child>
+        </children>
+    </item>
+    <item nodeId="node-1126">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1067">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1068"></child>
+        </children>
+    </item>
+    <item nodeId="node-1068">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1069">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -127,8 +768,158 @@ You can see a Hockey Table (closed) here.
         </children>
     </item>
     <item nodeId="node-1070">
-        <command xml:space="preserve">x hockey table</command>
-        <result xml:space="preserve">A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says "25 cents required".
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1071"></child>
+        </children>
+    </item>
+    <item nodeId="node-1071">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1072">
+        <command xml:space="preserve">take pager</command>
+        <result xml:space="preserve">Looks like it will help you along the way.  Keep it if you need hints.
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1074"></child>
+            <child nodeId="node-1073"></child>
+        </children>
+    </item>
+    <item nodeId="node-1073">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 3 turns.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1074">
+        <command xml:space="preserve">drop pager</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1075"></child>
+        </children>
+    </item>
+    <item nodeId="node-1075">
+        <command xml:space="preserve">take pager</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1076"></child>
+        </children>
+    </item>
+    <item nodeId="node-1076">
+        <command xml:space="preserve">socre</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1077"></child>
+        </children>
+    </item>
+    <item nodeId="node-1077">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 1 out of a possible 10, in 5 turns.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1078">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1079"></child>
+        </children>
+    </item>
+    <item nodeId="node-1079">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pen
+  Notepad
+  Phone
+  Flashlight
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1080">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1081"></child>
+        </children>
+    </item>
+    <item nodeId="node-1081">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1082"></child>
+        </children>
+    </item>
+    <item nodeId="node-1082">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1083"></child>
+        </children>
+    </item>
+    <item nodeId="node-1083">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1084"></child>
+        </children>
+    </item>
+    <item nodeId="node-1084">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Outside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1085"></child>
+        </children>
+    </item>
+    <item nodeId="node-1085">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1086"></child>
+        </children>
+    </item>
+    <item nodeId="node-1086">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -136,9 +927,9 @@ You can see a Hockey Table (closed) here.
         </children>
     </item>
     <item nodeId="node-1087">
-        <command xml:space="preserve">ne</command>
+        <command xml:space="preserve">n</command>
         <result xml:space="preserve">
-Back Alley
+Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -146,10 +937,9 @@ Back Alley
         </children>
     </item>
     <item nodeId="node-1088">
-        <command xml:space="preserve">sw</command>
+        <command xml:space="preserve">nw</command>
         <result xml:space="preserve">
-Hockey Table Room
-You can see a Hockey Table (closed) here.
+Hockey Table
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -160,7 +950,6 @@ You can see a Hockey Table (closed) here.
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Main Arcade Room
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -168,9 +957,9 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
         </children>
     </item>
     <item nodeId="node-1090">
-        <command xml:space="preserve">e</command>
+        <command xml:space="preserve">s</command>
         <result xml:space="preserve">
-Party Room
+Outside
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -178,8 +967,9 @@ Party Room
         </children>
     </item>
     <item nodeId="node-1091">
-        <command xml:space="preserve">e</command>
-        <result xml:space="preserve">You can't go that way.
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -187,10 +977,9 @@ Party Room
         </children>
     </item>
     <item nodeId="node-1092">
-        <command xml:space="preserve">w</command>
+        <command xml:space="preserve">e</command>
         <result xml:space="preserve">
-Main Arcade Room
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+Party Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -200,7 +989,7 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
     <item nodeId="node-1093">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
-Bathroom
+Main Arcade Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -209,7 +998,8 @@ Bathroom
     </item>
     <item nodeId="node-1094">
         <command xml:space="preserve">w</command>
-        <result xml:space="preserve">You can't go that way.
+        <result xml:space="preserve">
+Bathroom
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -217,8 +1007,8 @@ Bathroom
         </children>
     </item>
     <item nodeId="node-1095">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">You can't go that way.
+        <command xml:space="preserve">kms</command>
+        <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -226,734 +1016,13 @@ Bathroom
         </children>
     </item>
     <item nodeId="node-1096">
-        <command xml:space="preserve">e</command>
-        <result xml:space="preserve">
-Main Arcade Room
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1097"></child>
-        </children>
-    </item>
-    <item nodeId="node-1097">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside 
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1125">
-        <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">[Your score has just gone up by one point.]
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1126"></child>
-        </children>
-    </item>
-    <item nodeId="node-1126">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1127"></child>
-            <child nodeId="node-1150"></child>
-        </children>
-    </item>
-    <item nodeId="node-1150">
-        <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">That's already on.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1151"></child>
-        </children>
-    </item>
-    <item nodeId="node-1151">
-        <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1127">
-        <command xml:space="preserve">turn flashlight off</command>
-        <result xml:space="preserve">Flashlight is now off.
-
-It is now pitch dark in here!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1131"></child>
-        </children>
-    </item>
-    <item nodeId="node-1131">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1132"></child>
-        </children>
-    </item>
-    <item nodeId="node-1132">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It is pitch dark, and you can't see a thing.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1133"></child>
-        </children>
-    </item>
-    <item nodeId="node-1133">
-        <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">Now you can see!
-
-Main Arcade Room
-Large aracde with machines.
-
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1007">
-        <command xml:space="preserve">score</command>
-        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 1 turn.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
-        </children>
-    </item>
-    <item nodeId="node-1008">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Main Arcade Room
-You can see Pager and Pac-Man Machine (on which is Controls) here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1009"></child>
-        </children>
-    </item>
-    <item nodeId="node-1009">
-        <command xml:space="preserve">take pager</command>
-        <result xml:space="preserve">Taken.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1010"></child>
-        </children>
-    </item>
-    <item nodeId="node-1010">
-        <command xml:space="preserve">score</command>
-        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 3 turns.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1011">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1099"></child>
-            <child nodeId="node-1035"></child>
-            <child nodeId="node-1106"></child>
-            <child nodeId="node-1029"></child>
-            <child nodeId="node-1112"></child>
-            <child nodeId="node-1025"></child>
-            <child nodeId="node-1019"></child>
-            <child nodeId="node-1012"></child>
-        </children>
-    </item>
-    <item nodeId="node-1012">
-        <command xml:space="preserve">x quarter</command>
-        <result xml:space="preserve">A normal quarter used to play games.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
-        </children>
-    </item>
-    <item nodeId="node-1013">
-        <command xml:space="preserve">take quarter</command>
-        <result xml:space="preserve">Taken.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
-        </children>
-    </item>
-    <item nodeId="node-1014">
-        <command xml:space="preserve">ne</command>
-        <result xml:space="preserve">
-Food Counter
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
-        </children>
-    </item>
-    <item nodeId="node-1015">
-        <command xml:space="preserve">sw</command>
-        <result xml:space="preserve">
-Main Arcade Room
-You can see Pac-Man Machine here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1016"></child>
-        </children>
-    </item>
-    <item nodeId="node-1016">
-        <command xml:space="preserve">nw</command>
-        <result xml:space="preserve">
-Hockey Table Room
-You can see a Hockey Table (closed) here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1017"></child>
-        </children>
-    </item>
-    <item nodeId="node-1017">
-        <command xml:space="preserve">unlock hockey table</command>
-        <result xml:space="preserve">What do you want to unlock the Hockey Table with?
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1018"></child>
-        </children>
-    </item>
-    <item nodeId="node-1018">
-        <command xml:space="preserve">quarter</command>
-        <result xml:space="preserve">You unlock the Hockey Table.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1019">
-        <command xml:space="preserve">x pac-man machine</command>
-        <result xml:space="preserve">A classic Pac-Man Machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
-
-On Pac-Man Machine is Controls.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1020"></child>
-        </children>
-    </item>
-    <item nodeId="node-1020">
-        <command xml:space="preserve">look underneath</command>
-        <result xml:space="preserve">You can't see any such thing.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1021"></child>
-        </children>
-    </item>
-    <item nodeId="node-1021">
-        <command xml:space="preserve">x pac-man machine</command>
-        <result xml:space="preserve">A classic Pac-Man Machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
-
-On Pac-Man Machine is Controls.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1022"></child>
-        </children>
-    </item>
-    <item nodeId="node-1022">
-        <command xml:space="preserve">x joysticks</command>
-        <result xml:space="preserve">You can't see any such thing.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1023"></child>
-        </children>
-    </item>
-    <item nodeId="node-1023">
-        <command xml:space="preserve">x controls</command>
-        <result xml:space="preserve">It's used to control Pac-Man.  There is a dusty quarter next to it.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1024"></child>
-        </children>
-    </item>
-    <item nodeId="node-1024">
-        <command xml:space="preserve">take quarter</command>
-        <result xml:space="preserve">Taken.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1025">
-        <command xml:space="preserve">x me</command>
-        <result xml:space="preserve">You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1026"></child>
-        </children>
-    </item>
-    <item nodeId="node-1026">
-        <command xml:space="preserve">i</command>
-        <result xml:space="preserve">You are carrying:
-  Pen
-  Notepad
-  Phone
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1027"></child>
-        </children>
-    </item>
-    <item nodeId="node-1027">
-        <command xml:space="preserve">x phone</command>
-        <result xml:space="preserve">An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1028"></child>
-        </children>
-    </item>
-    <item nodeId="node-1028">
-        <command xml:space="preserve">use flashlight</command>
-        <result xml:space="preserve">That's not a verb I recognise.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1112">
-        <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">[Your score has just gone up by one point.]
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1154"></child>
-            <child nodeId="node-1113"></child>
-            <child nodeId="node-1141"></child>
-        </children>
-    </item>
-    <item nodeId="node-1141">
-        <command xml:space="preserve">turn off flashlight</command>
-        <result xml:space="preserve">Flashlight is now off.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1142"></child>
-        </children>
-    </item>
-    <item nodeId="node-1142">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1143"></child>
-        </children>
-    </item>
-    <item nodeId="node-1143">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should find the power...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1144"></child>
-        </children>
-    </item>
-    <item nodeId="node-1144">
-        <command xml:space="preserve">take all</command>
-        <result xml:space="preserve">There are none at all available!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1145"></child>
-        </children>
-    </item>
-    <item nodeId="node-1145">
-        <command xml:space="preserve">i</command>
-        <result xml:space="preserve">You are carrying:
-  Pen
-  Notepad
-  Phone
-  Flashlight
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1146"></child>
-        </children>
-    </item>
-    <item nodeId="node-1146">
-        <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">Now you can see!
-
-Main Arcade Room
-Large aracde with machines.
-
-You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1147"></child>
-        </children>
-    </item>
-    <item nodeId="node-1147">
-        <command xml:space="preserve">take all</command>
-        <result xml:space="preserve">Pager: Looks like it will help you along the way.  You should keep it if you need hints.
-
-[Your score has just gone up by one point.]
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1113">
-        <command xml:space="preserve">take all</command>
-        <result xml:space="preserve">There are none at all available!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1117"></child>
-        </children>
-    </item>
-    <item nodeId="node-1117">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1118"></child>
-        </children>
-    </item>
-    <item nodeId="node-1118">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It is pitch dark, and you can't see a thing.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1154">
-        <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1158"></child>
-            <child nodeId="node-1164"></child>
-        </children>
-    </item>
-    <item nodeId="node-1164">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1165"></child>
-        </children>
-    </item>
-    <item nodeId="node-1165">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1158">
-        <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1159"></child>
-        </children>
-    </item>
-    <item nodeId="node-1159">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Just go inside and explore!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1160"></child>
-        </children>
-    </item>
-    <item nodeId="node-1160">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Darkness
-It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1029">
-        <command xml:space="preserve">take pager</command>
-        <result xml:space="preserve">Looks like it will help you along the way.  Keep it if you need hints.
-
-[Your score has just gone up by one point.]
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1031"></child>
-            <child nodeId="node-1030"></child>
-        </children>
-    </item>
-    <item nodeId="node-1030">
-        <command xml:space="preserve">score</command>
-        <result xml:space="preserve">You have so far scored 0 out of a possible 10, in 3 turns.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1031">
-        <command xml:space="preserve">drop pager</command>
-        <result xml:space="preserve">Dropped.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1032"></child>
-        </children>
-    </item>
-    <item nodeId="node-1032">
-        <command xml:space="preserve">take pager</command>
-        <result xml:space="preserve">Taken.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1033"></child>
-        </children>
-    </item>
-    <item nodeId="node-1033">
-        <command xml:space="preserve">socre</command>
-        <result xml:space="preserve">That's not a verb I recognise.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1034"></child>
-        </children>
-    </item>
-    <item nodeId="node-1034">
-        <command xml:space="preserve">score</command>
-        <result xml:space="preserve">You have so far scored 1 out of a possible 10, in 5 turns.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1106">
-        <command xml:space="preserve">take all</command>
-        <result xml:space="preserve">There are none at all available!
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1107"></child>
-        </children>
-    </item>
-    <item nodeId="node-1107">
-        <command xml:space="preserve">i</command>
-        <result xml:space="preserve">You are carrying:
-  Pen
-  Notepad
-  Phone
-  Flashlight
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1035">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">You can't go that way.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1036"></child>
-        </children>
-    </item>
-    <item nodeId="node-1036">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1037"></child>
-        </children>
-    </item>
-    <item nodeId="node-1037">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Main Arcade Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1038"></child>
-        </children>
-    </item>
-    <item nodeId="node-1038">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">You can't go that way.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1039"></child>
-        </children>
-    </item>
-    <item nodeId="node-1039">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1040"></child>
-        </children>
-    </item>
-    <item nodeId="node-1040">
-        <command xml:space="preserve">e</command>
-        <result xml:space="preserve">You can't go that way.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1041"></child>
-        </children>
-    </item>
-    <item nodeId="node-1041">
-        <command xml:space="preserve">w</command>
-        <result xml:space="preserve">You can't go that way.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1042"></child>
-        </children>
-    </item>
-    <item nodeId="node-1042">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Main Arcade Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1043"></child>
-        </children>
-    </item>
-    <item nodeId="node-1043">
-        <command xml:space="preserve">nw</command>
-        <result xml:space="preserve">
-Hockey Table
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1044"></child>
-        </children>
-    </item>
-    <item nodeId="node-1044">
-        <command xml:space="preserve">se</command>
-        <result xml:space="preserve">
-Main Arcade Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1045"></child>
-        </children>
-    </item>
-    <item nodeId="node-1045">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Outside
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1046"></child>
-        </children>
-    </item>
-    <item nodeId="node-1046">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Main Arcade Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1047"></child>
-        </children>
-    </item>
-    <item nodeId="node-1047">
-        <command xml:space="preserve">e</command>
-        <result xml:space="preserve">
-Party Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1048"></child>
-        </children>
-    </item>
-    <item nodeId="node-1048">
-        <command xml:space="preserve">w</command>
-        <result xml:space="preserve">
-Main Arcade Room
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1049"></child>
-        </children>
-    </item>
-    <item nodeId="node-1049">
-        <command xml:space="preserve">w</command>
-        <result xml:space="preserve">
-Bathroom
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1050"></child>
-        </children>
-    </item>
-    <item nodeId="node-1050">
-        <command xml:space="preserve">kms</command>
-        <result xml:space="preserve">That's not a verb I recognise.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1051"></child>
-        </children>
-    </item>
-    <item nodeId="node-1051">
         <command xml:space="preserve">x me</command>
         <result xml:space="preserve">You are curious to see what lies in the abandoned building.  You brought your trusty camera, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1099">
+    <item nodeId="node-1097">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying:
   Pen
@@ -963,19 +1032,19 @@ Bathroom
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1100"></child>
+        <children><child nodeId="node-1098"></child>
         </children>
     </item>
-    <item nodeId="node-1100">
+    <item nodeId="node-1098">
         <command xml:space="preserve">eat flashlight</command>
         <result xml:space="preserve">That's plainly inedible.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1101"></child>
+        <children><child nodeId="node-1099"></child>
         </children>
     </item>
-    <item nodeId="node-1101">
+    <item nodeId="node-1099">
         <command xml:space="preserve">ne</command>
         <result xml:space="preserve">
 Food Counter
@@ -983,10 +1052,10 @@ This part of the Main Arcade Room was probably used to serve all the customers f
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1102"></child>
+        <children><child nodeId="node-1100"></child>
         </children>
     </item>
-    <item nodeId="node-1102">
+    <item nodeId="node-1100">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">
 Main Arcade Room
@@ -994,10 +1063,10 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1103"></child>
+        <children><child nodeId="node-1101"></child>
         </children>
     </item>
-    <item nodeId="node-1103">
+    <item nodeId="node-1101">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">
 Hockey Table Room
@@ -1007,17 +1076,76 @@ You can see a Hockey Table (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1104"></child>
+        <children><child nodeId="node-1102"></child>
         </children>
     </item>
-    <item nodeId="node-1104">
+    <item nodeId="node-1102">
         <command xml:space="preserve">x hockey table</command>
         <result xml:space="preserve">A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says "25 cents required".
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1052">
+    <item nodeId="node-1624">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Party Room
+This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1625"></child>
+        </children>
+    </item>
+    <item nodeId="node-1625">
+        <command xml:space="preserve">x boxes</command>
+        <result xml:space="preserve">A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1626"></child>
+        </children>
+    </item>
+    <item nodeId="node-1626">
+        <command xml:space="preserve">look behind boxes</command>
+        <result xml:space="preserve">You found the two missing paddles for the air hockey table.  Go put it on the table.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1627"></child>
+        </children>
+    </item>
+    <item nodeId="node-1627">
+        <command xml:space="preserve">x boxes</command>
+        <result xml:space="preserve">A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1628"></child>
+        </children>
+    </item>
+    <item nodeId="node-1628">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1629"></child>
+        </children>
+    </item>
+    <item nodeId="node-1629">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Hockey Paddles
+  Pen
+  Notepad
+  Phone
+  Flashlight
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1103">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying:
   Pencil
@@ -1025,10 +1153,10 @@ You can see a Hockey Table (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1053"></child>
+        <children><child nodeId="node-1104"></child>
         </children>
     </item>
-    <item nodeId="node-1053">
+    <item nodeId="node-1104">
         <command xml:space="preserve">eat pencil</command>
         <result xml:space="preserve">That's plainly inedible.
 

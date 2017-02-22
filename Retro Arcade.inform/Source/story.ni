@@ -27,6 +27,9 @@ After taking quarter for the first time:
 After switching on flashlight for the first time:
 	increase score by 1.
 
+After taking paddles for the first time:
+	increase score by 1.
+
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
@@ -36,7 +39,7 @@ Rule for deciding whether all includes something: It does not.
 
 [Prolouge]
 When game begins:
-	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.".
+	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80's.  ".
 	Pen is an object.
 		Player is carrying pen.
 		The description of pen is "A new, ball point pen used for writing down notes.  Don't lose it!".
@@ -54,20 +57,22 @@ When game begins:
 The flashlight is unlit.
 The flashlight is switched off.
 After switching on flashlight:
-	say "Now you can see!";
+	say "Now you can see.";
 	now flashlight is lit.
 After switching off flashlight:
 	say "Flashlight is now off.";
 	now flashlight is unlit.
 
-After deciding the scope of the player when the location is the Main Arcade Room:
-	place Main Arcade Room in scope.
+[Every turn:
+	If flashlight is lit:
+		room is now lit;
+			say "You can see now!".
+	Otherwise:
+		room is dark.]
 
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
 	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you should look for a source of light...".
-[Rule for printing the announcement of darkness:
-	say "You can see now!". nneed help]
 
 [Rooms]
 Spawn is a room.
@@ -82,6 +87,36 @@ Bathroom is west of Main Arcade Room.
 
 Party Room is east of Main Arcade Room.
 	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
+	
+Boxes is a thing.
+Boxes is in Party Room.
+Boxes is undescribed.
+Boxes is fixed in place.
+The description of boxes is "A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.".
+
+
+Looking behind is an action applying to one thing and requiring light.
+	Understand "Look behind [something]" as looking behind.
+
+Hockey Paddles is a thing.
+Hockey paddles is in Party Room.
+Understand "Paddles" as Hockey Paddles.
+The description of paddles is "A pair of air hockey paddles.  The white has faded, and has turned a brown shade.  There are scratches and dents from hitting the puck too hard.  The air hockey table must have been a popular game.".
+Hockey paddles is undescribed.
+Hockey paddles can be found.  
+Hockey paddles is not found.
+Instead of looking behind the boxes:
+	If paddles is found:
+		say "Just a lot of dirt, dust, and spider webs.";
+	Otherwise:
+		now paddles is found;
+		now player carries paddles;
+		say "You found the two missing paddles for the air hockey table.  Go put it on the table.".
+
+
+
+
+
 
 Hockey Table Room is northwest of Main Arcade Room.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
@@ -153,7 +188,7 @@ Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
 	Machine4 is fixed in place.
 	Machine4 is not edible.
-	The description of Machine4 is "One of the most recognizable games.  On the side, there seems to be a ".
+	The description of Machine4 is "One of the most recognizable games.".
 	
 
 
