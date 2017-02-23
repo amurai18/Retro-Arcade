@@ -30,16 +30,6 @@ After switching on flashlight for the first time:
 After taking paddles for the first time:
 	increase score by 1.
 
-[After placing paddles on Hockey table for the first time:
-	increase score by 1.
-
-Placing is an action applying to one thing.
-	Understand "Place [something] on top of [something]" as placing.
-
-After player places paddles on top of hockey table:
-	Remove paddles from inventory;
-		say "Now find the hockey puck.".]
-
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
 
@@ -71,7 +61,7 @@ Carry out switching on flashlight:
 	now flashlight is lit.
 Carry out switching off flashlight:
 	now flashlight is unlit.
-
+	
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
 	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you have a source of light already...".
@@ -83,6 +73,7 @@ Spawn is a room.
 Spawn is south of Main Arcade Room.
 The Main Arcade Room is dark.
 
+[Help from Mrs. Kiang]
 The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
 	
 Bathroom is west of Main Arcade Room. 
@@ -102,6 +93,16 @@ The description of boxes is "A bunch of old, dusty cardboard boxes stacked in th
 
 Looking behind is an action applying to one thing and requiring light.
 	Understand "Look behind [something]" as looking behind.
+
+Placing is an action applying to two things.
+	Understand "Place [something] on top of [something]" as placing.
+	Understand "Place [something] on [something]" as placing.
+	
+Check placing:
+	If player is not carrying the paddles:
+		say "Where are the paddles?";
+	Otherwise:
+		Continue the action.
 
 Hockey Paddles is a thing.
 Hockey paddles is in Party Room.
@@ -130,9 +131,9 @@ Table1 is a container.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
-[If player is carrying quarter;
-If player is carrying paddles;
-Then "unlock" hockey table]
+	[If player is carrying quarter;
+	If player is carrying paddles;
+		Then "unlock" hockey table]
 	The Table1 is fixed in place.
 	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
 
