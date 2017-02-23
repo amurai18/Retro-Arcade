@@ -68,10 +68,8 @@ A device can be lit or unlit.  A device is usually unlit.
 The flashlight is unlit.
 The flashlight is switched off.
 Carry out switching on flashlight:
-	say "Now you can see.";
 	now flashlight is lit.
 Carry out switching off flashlight:
-	say "Flashlight is now off.";
 	now flashlight is unlit.
 
 [Inform 7 Handbook By Jim Aikin]
@@ -83,12 +81,10 @@ Spawn is a room.
 	The printed name of Spawn is "Outside".	
 	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
 Spawn is south of Main Arcade Room.
-	The description of Main Arcade Room is "Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
-	The Main Arcade Room is dark.
+The Main Arcade Room is dark.
 
-After player entering Main Arcade Room for the first time:
-	say "This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table.".
-
+The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
+	
 Bathroom is west of Main Arcade Room. 
 Bathroom is dark.
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
