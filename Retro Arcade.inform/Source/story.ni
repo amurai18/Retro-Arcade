@@ -3,7 +3,7 @@
 
 [Navigation from Get that Cat]
 When play begins: 
-	now left hand status line is "Exits: [exit list]"; 
+	now left hand status line is "Possible Exits: [exit list]"; 
       now right hand status line is "[location]".
 To say exit list: 
 	let place be location; 
@@ -216,8 +216,20 @@ An every turn rule:
 		end the story finally.
 
 
-
-
+[Fastest Way to win game]
+[turn on flashlight
+ go north
+ x Pac-man machine
+ x controls
+ then take quarter
+ go east
+ look behind boxes 
+ take paddles
+ go w, then west again
+ take puck
+ go to hockey table
+ place paddles and puck on top of table
+ insert quarter]
 
 
 
