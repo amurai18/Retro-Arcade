@@ -210,10 +210,10 @@ Machine4 is an object in Main Arcade Room.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
 	
 [End]
-[An every turn rule:
+An every turn rule:
 	if player unlocks Table1:
-		say "The power turned on!".
-		end the story finally.]
+		say "The power turned on!";
+		end the story finally.
 
 
 
