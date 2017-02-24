@@ -83,6 +83,7 @@ Bathroom is dark.
 Puck is an object in Bathroom.
 The printed name of puck is "Air Hockey Puck".
 The description of puck is "A neon green air hockey puck.".
+Puck is undescribed.
 
 [Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
@@ -138,8 +139,10 @@ Table1 is a container.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
-[Rule for printing the name of Table1:
-	If Table1 is closed:]
+
+Rule for printing the name of Table1:
+	If Table1 is closed:
+		say "Air Hockey Table".
 
 An every turn rule:
 	If player is carrying quarter:
@@ -164,8 +167,6 @@ Back Alley is dark.
 [Pager is a NPC]
 Pager is a man in Main Arcade Room.
 	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abonded arcade.  Nevertheless, it seems useful.  Might as well take it.".
-	
-	
 
 [First Puzzle with Quarter]
 Quarter is undescribed.
