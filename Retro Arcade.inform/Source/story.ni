@@ -79,6 +79,10 @@ The description of the Main Arcade Room is "[if player is in Main Arcade room fo
 Bathroom is west of Main Arcade Room. 
 Bathroom is dark.
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
+[Hockey Puck]
+Puck is an object in Bathroom.
+The printed name of puck is "Air Hockey Puck".
+The description of puck is "A neon green air hockey puck.".
 
 [Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
@@ -101,8 +105,11 @@ Placing is an action applying to two things.
 Check placing:
 	If player is not carrying the paddles:
 		say "Where are the paddles?";
+	If player is not carrying the puck:
+		say "Where is the puck?";
 	Otherwise:
 		Continue the action.
+
 
 Hockey Paddles is a thing.
 Hockey paddles is in Party Room.
@@ -131,9 +138,17 @@ Table1 is a container.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
-	[If player is carrying quarter;
-	If player is carrying paddles;
-		Then "unlock" hockey table]
+[Rule for printing the name of Table1:
+	If Table1 is closed:]
+
+An every turn rule:
+	If player is carrying quarter:
+		If player is carrying paddles:
+			If player is carrying puck:
+				Now Table1 is unlocked;
+	Otherwise:
+		Continue the action.
+	
 	The Table1 is fixed in place.
 	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
 
@@ -147,9 +162,10 @@ Back Alley is dark.
 	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans and cardboard boxes.".
 
 [Pager is a NPC]
-Pager is an object in Main Arcade Room.
-	Pager is not edible. 
+Pager is a man in Main Arcade Room.
 	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abonded arcade.  Nevertheless, it seems useful.  Might as well take it.".
+	
+	
 
 [First Puzzle with Quarter]
 Quarter is undescribed.
@@ -192,7 +208,11 @@ Machine4 is an object in Main Arcade Room.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
 	
-
+[End]
+[An every turn rule:
+	if player unlocks Table1:
+		say "The power turned on!".
+		end the story finally.]
 
 
 
