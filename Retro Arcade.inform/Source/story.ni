@@ -24,20 +24,16 @@ The target score is a number variable.  The target score is 6.
 	Use the serial comma.
 
 After taking the pager for the first time:
-	increase score by 1;
-		say "Looks like it will help you along the way.  You should keep it if you need hints.".
+	increase score by 1.
 After taking quarter for the first time:
-	increase score by 1;
-		say "You can possibly use this to play a game.  The air hockey table looks interesting.".
+	increase score by 1.
 After switching on flashlight for the first time:
 	increase score by 1;
 		say "Now you can see things easier.".
 After taking paddles for the first time:
-	increase score by 1;
-		say "These look like the air hockey table paddles.  Place them on the table.".
+	increase score by 1.
 After taking puck for the first time:
-	increase score by 1;
-		say "This looks like the puck for the air hockey table.  Place it on the table.".
+	increase score by 1.
 [After turning on power]
 
 [Start Descriptions and Inventory]
@@ -75,7 +71,7 @@ Rule for printing the description of a dark room:
 [Outside and Main Arcade]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
-	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
+	The description of spawn is "Outside the abandoned building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
 Spawn is south of Main Arcade Room.
 The Main Arcade Room is dark.
 
@@ -201,6 +197,10 @@ Food Counter is northeast of Main Arcade Room.
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
 	
+Key is in Food Counter.
+Key is undescribed.
+Key unlocks Electric Box.
+
 RedCounter is scenery in Food Counter.
 
 NeonSign is scenery in Food Counter.
@@ -212,6 +212,9 @@ Back Alley is northwest of Food Counter.
 Back Alley is dark.
 	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.".
 	
+Electric Box is a container in Back Alley.
+Electric Box is locked.
+
 GarbageCans is scenery in Back Alley.
 	The printed name of GarbageCans is "Garbage Cans".
 	Understand "trash cans" as GarbageCans.
@@ -223,15 +226,46 @@ GarbageCans is scenery in Back Alley.
 	Understand "trash" as GarbageCans.
 	The description of GarbageCans is "A couple of garbage cans that are no longer in use.  They look pretty disgusting as it hasn't been touched in many, many years."
 
-[Pager is a NPC]
-Pager is a man in Main Arcade Room.
-	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abonded arcade.  Nevertheless, it seems useful.  Might as well take it.".
+[Pager is like a NPC]
+Pager is a thing in Main Arcade Room.
+	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abandoned arcade.  Nevertheless, it seems useful.  Might as well take it.".
+
+[Inform 7 Handbook By Jim Aikin]
+[Tried to make pager an NPC, but decided to make it a thing that triggers after an event has occured]
+[Every turn:
+	if the location of Pager is not the location of the player:
+		let the way be the best route from the location of Pager to the location of the player;
+		try Pager going the way.]
+		
+Instead of taking Pager:
+	say "The pager glows and says: There might be some loose change in the Main Arcade Room.";
+	move Pager to player.
+
+Instead of taking quarter:
+	say "The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?";
+	move quarter to player.
+
+Instead of taking puck:
+	say "The pager glows once again and says: If you have the paddles and quarter, it's time to play.";
+	move puck to player.
+	
+Instead of taking paddles:
+	say "The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...";
+	move paddles to player.
 
 [First Puzzle with Quarter]
 Quarter is undescribed.
 	The description of Quarter is "A normal quarter used to play games.".
 	The Quarter is not edible.
 	Quarter is on top of Machine1.
+
+Inserting is an action applying to two things.
+	Understand "insert [something] into [something]" as inserting.
+	Understand "put [something] into [something]" as inserting.
+	Understand "Place [something] in [something]" as inserting.
+	Understand "insert [something] in the [something]" as inserting.
+	Understand "slide [something] into [something]" as inserting.
+	Understand "put [something] in the [something]" as inserting.
 
 [Gives a clue as to where quarter is]
 Controls is an object.
@@ -240,6 +274,10 @@ Controls is an object.
 	Controls is not edible.
 	Controls is undescribed.
 	The description of Controls is "It's used to control Pac-Man.  There is a dusty quarter next to it.".
+	Understand "pac man controls" as controls.
+	Understand "game controls" as controls.
+	Understand "game control" as controls.
+	Understand "pac-man controls" as controls.
 
 [Arcade Machines]
 Machine1 is an object in Main Arcade Room.  
@@ -266,7 +304,7 @@ Machine2 is an object in Main Arcade Room.
 	Understand "Space invaders machine" as Machine2.
 	Machine2 is fixed in place.
 	Machine2 is not edible.
-	The description of Machine2 is "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop.  The control pad seems to be faded and dusty.  Nothing special seems to stick out.".
+	The description of Machine2 is "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop at my office.  Nothing special seems to stick out.".
 	
 Machine3 is an object in Main Arcade Room.
 	The printed name of Machine3 is "Donkey Kong".
@@ -278,7 +316,7 @@ Machine3 is an object in Main Arcade Room.
 	Understand "Donkey Kong Game" as Machine3.
 	Machine3 is fixed in place.
 	Machine3 is not edible.
-	The description of Machine3 is "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors really seem to pop off the machine.  Impressive for a game released in 1981.  Nothing special seems to stick out.".
+	The description of Machine3 is "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors of the game used to pop off the screen.  Too bad it doesn't work.  Impressive for a game released in 1981.  Nothing special seems to stick out.".
 	
 Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
@@ -296,6 +334,7 @@ An every turn rule:
 
 
 [Fastest Way to win game]
+
 [turn on flashlight
  go north
  x Pac-man machine
@@ -305,12 +344,16 @@ An every turn rule:
  look behind boxes 
  take paddles
  go w, then west again
- take puck
+ take puck on sink
  go to hockey table
  place paddles and puck on top of table
  insert quarter
+ Go to food counter
+ Look behind counter
+ Find key to electic box
  go to the back alley
- ]
+ unlock electric box with key
+ the end.]
 
 
 
