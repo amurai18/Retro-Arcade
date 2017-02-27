@@ -22,8 +22,8 @@ placeholder [IFID] = "839A8AEA-C5C7-43B9-B834-3FB3F92000A8"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2017"
 placeholder [TITLE] = "Retro Arcade"
-placeholder [AUTHOR] = "Aaron Murai"
-placeholder [BLURB] = "A work of interactive fiction."
+placeholder [AUTHOR] = "Aaron Murai The release number is 1"
+placeholder [BLURB] = "A retro, mystery of an abandoned arcade. You are a young, eager news reporter that is investigating an arcade. Will you be able to find the missing pieces in order to turn on the power?"
 
 ! Other material to release
 

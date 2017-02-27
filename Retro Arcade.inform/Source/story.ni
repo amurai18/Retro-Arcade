@@ -1,4 +1,10 @@
+[Front Matter]
 "Retro Arcade" by Aaron Murai
+The release number is 1. 
+The story creation year is 2017. 
+The story headline is "A Retro Mystery.". 
+The story genre is "Mystery". 
+The story description is "A retro, mystery of an abandoned arcade.  You are a young, eager news reporter that is investigating an arcade.  Will you be able to find the missing pieces in order to turn on the power?".
 
 
 [Navigation from Get that Cat]
@@ -13,31 +19,31 @@ To say exit list:
 
 [Scoring System]
 Use scoring.
-The target score is a number variable.  The target score is 5.
-	The maximum score is 5.
+The target score is a number variable.  The target score is 6.
+	The maximum score is 6.
 	Use the serial comma.
 
 After taking the pager for the first time:
 	increase score by 1;
-	say "Looks like it will help you along the way.  You should keep it if you need hints.".
-
+		say "Looks like it will help you along the way.  You should keep it if you need hints.".
 After taking quarter for the first time:
 	increase score by 1;
-		say "This seems like "
-
+		say "You can possibly use this to play a game.  The air hockey table looks interesting.".
 After switching on flashlight for the first time:
 	increase score by 1;
 		say "Now you can see things easier.".
-
 After taking paddles for the first time:
-	increase score by 1.
+	increase score by 1;
+		say "These look like the air hockey table paddles.  Place them on the table.".
+After taking puck for the first time:
+	increase score by 1;
+		say "This looks like the puck for the air hockey table.  Place it on the table.".
+[After turning on power]
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
-
 [Disabling take all]
 Rule for deciding whether all includes something: It does not.
-
 [Prolouge]
 When game begins:
 	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80s.".
@@ -53,7 +59,6 @@ When game begins:
 
 [Flashlight and Dark Rooms]
 A device can be lit or unlit.  A device is usually unlit.
-
 The flashlight is unlit.
 The flashlight is switched off.
 Carry out switching on flashlight:

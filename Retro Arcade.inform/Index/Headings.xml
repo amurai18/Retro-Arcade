@@ -4,8 +4,8 @@
     <key>Application Version</key><string>6M62</string>
     <key>0</key><dict>
         <key>Filename</key><string>/Users/amurai18/Desktop/Classes/Computer Science/Retro-Arcade/Retro Arcade.inform/Source/story.ni</string>
-        <key>Line</key><integer>1</integer>
-        <key>Title</key><string>"Retro Arcade" by Aaron Murai</string>
+        <key>Line</key><integer>2</integer>
+        <key>Title</key><string>"Retro Arcade" by Aaron Murai The release number is 1</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>

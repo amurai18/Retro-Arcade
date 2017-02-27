@@ -7,10 +7,11 @@
         </identification>
         <bibliographic>
             <title>Retro Arcade</title>
-            <author>Aaron Murai</author>
-            <headline>An Interactive Fiction</headline>
-            <genre>Fiction</genre>
+            <author>Aaron Murai The release number is 1</author>
+            <headline>A Retro Mystery.</headline>
+            <genre>Mystery</genre>
             <firstpublished>2017</firstpublished>
+            <description>A retro, mystery of an abandoned arcade. You are a young, eager news reporter that is investigating an arcade. Will you be able to find the missing pieces in order to turn on the power?</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
