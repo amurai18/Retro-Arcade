@@ -34,7 +34,8 @@ After taking paddles for the first time:
 	increase score by 1.
 After taking puck for the first time:
 	increase score by 1.
-[After turning on power]
+After unlocking electric box:
+	increase score by 1.
 
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
@@ -42,7 +43,7 @@ The description of player is "You are curious to see what lies in the abandoned 
 Rule for deciding whether all includes something: It does not.
 [Prolouge]
 When game begins:
-	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80s.".
+	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from long ago.".
 	Pen is an object.
 		Player is carrying pen.
 		The description of pen is "A new, ball point pen used for writing down notes.  Don't lose it!".
@@ -214,6 +215,9 @@ Back Alley is dark.
 	
 Electric Box is a container in Back Alley.
 Electric Box is locked.
+Electric Box is undescribed.
+Electric box is fixed in place.
+The description of electric box is "The box is currently locked, but it looks like a key will unlock it.".  
 
 GarbageCans is scenery in Back Alley.
 	The printed name of GarbageCans is "Garbage Cans".
@@ -328,8 +332,8 @@ Machine4 is an object in Main Arcade Room.
 	
 [End]
 An every turn rule:
-	if player unlocks Table1:
-		say "The power turned on!";
+	if player unlocks Electric box:
+		say "The power turned on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
 		end the story finally.
 
 

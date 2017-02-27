@@ -7,7 +7,7 @@
         <result xml:space="preserve">
 
 
-As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from the 80s.
+As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from long ago.
 
 Retro Arcade
 A Retro Mystery. by Aaron Murai The release number is 1
@@ -330,11 +330,12 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
     </item>
     <item nodeId="node-1378">
         <command xml:space="preserve">take pager</command>
-        <result xml:space="preserve">[Your score has just gone up by one point.]
+        <result xml:space="preserve">The pager glows and says: There might be some loose change in the Main Arcade Room.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1412"></child>
+        <children><child nodeId="node-1928"></child>
+            <child nodeId="node-1412"></child>
         </children>
     </item>
     <item nodeId="node-1412">
@@ -349,6 +350,137 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
     <item nodeId="node-1413">
         <command xml:space="preserve">take quarter</command>
         <result xml:space="preserve">[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1928">
+        <command xml:space="preserve">take quarter</command>
+        <result xml:space="preserve">The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1929"></child>
+        </children>
+    </item>
+    <item nodeId="node-1929">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Party Room
+This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1930"></child>
+        </children>
+    </item>
+    <item nodeId="node-1930">
+        <command xml:space="preserve">take paddles</command>
+        <result xml:space="preserve">The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1931"></child>
+        </children>
+    </item>
+    <item nodeId="node-1931">
+        <command xml:space="preserve">ww</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1932"></child>
+        </children>
+    </item>
+    <item nodeId="node-1932">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Arcade Room
+Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+
+You can see Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1933"></child>
+        </children>
+    </item>
+    <item nodeId="node-1933">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1934"></child>
+        </children>
+    </item>
+    <item nodeId="node-1934">
+        <command xml:space="preserve">take puck</command>
+        <result xml:space="preserve">The pager glows once again and says: If you have the paddles and quarter, it's time to play.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1935"></child>
+        </children>
+    </item>
+    <item nodeId="node-1935">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Arcade Room
+Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+
+You can see Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1936"></child>
+        </children>
+    </item>
+    <item nodeId="node-1936">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Food Counter
+This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, "Food and Drink", and a pizza poster.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1937"></child>
+        </children>
+    </item>
+    <item nodeId="node-1937">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1938"></child>
+        </children>
+    </item>
+    <item nodeId="node-1938">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Back Alley
+A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1939"></child>
+        </children>
+    </item>
+    <item nodeId="node-1939">
+        <command xml:space="preserve">unlock electric box with key</command>
+        <result xml:space="preserve">You unlock Electric Box.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1940"></child>
+        </children>
+    </item>
+    <item nodeId="node-1940">
+        <command xml:space="preserve">open electric box</command>
+        <result xml:space="preserve">You open Electric Box.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
