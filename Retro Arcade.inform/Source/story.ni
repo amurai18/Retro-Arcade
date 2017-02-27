@@ -72,7 +72,7 @@ Understand "use [something]" as switching on.
 Rule for printing the description of a dark room:
 	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you have a source of light already...".
 
-[Rooms]
+[Outside and Main Arcade]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
 	The description of spawn is "Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
@@ -95,12 +95,20 @@ Puck is undescribed.
 Party Room is east of Main Arcade Room.
 Party Room is dark.
 	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
+
+Tables is scenery in Party Room.
+	The printed name of tables is "Portable Tables".
+	Understand "table" as Tables.
+	Understand "portabletables" as tables.
+	The description of tables is "Just some portable, plastic tables.  These must've been used because they're easy to clean.  Understandable...".
+	Tables is undescribed.
 	
 Boxes is a thing.
 Boxes is in Party Room.
 Boxes is undescribed.
 Boxes is fixed in place.
 The description of boxes is "A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.".
+Understand "box" as boxes.
 
 Looking behind is an action applying to one thing and requiring light.
 	Understand "Look behind [something]" as looking behind.
@@ -116,7 +124,6 @@ Check placing:
 		say "Where is the puck?";
 	Otherwise:
 		Continue the action.
-
 
 Hockey Paddles is a thing.
 Hockey paddles is in Party Room.
@@ -142,14 +149,15 @@ Table1 is a container.
 	The printed name of Table1 is "Air Hockey Table".
 	Understand "hockey table" as Table1.
 	Understand "table" as Table1.
+	Understand "air hockey table" as Table1.
+	Understand "hockeytable" as Table1.
+	Understand "hockey-table" as Table1.
+	Understand "airhockeytable" as Table1.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
-
-Rule for printing the name of Table1:
-	If Table1 is closed:
-		say "Air Hockey Table".
-
+	
+[Unlocking table]
 An every turn rule:
 	If player is carrying quarter:
 		If player is carrying paddles:
@@ -164,11 +172,28 @@ An every turn rule:
 Food Counter is northeast of Main Arcade Room. 
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
+	
+RedCounter is scenery in Food Counter.
+
+NeonSign is scenery in Food Counter.
+
+PizzaPoster is scenery in Food Counter.
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
 Back Alley is dark.
-	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans and cardboard boxes.".
+	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.".
+	
+GarbageCans is scenery in Back Alley.
+	The printed name of GarbageCans is "Garbage Cans".
+	Understand "trash cans" as GarbageCans.
+	Understand "Garbage cans" as GarbageCans.
+	Understand "trash can" as GarbageCans.
+	Understand "Garbage can" as GarbageCans.
+	Understand "garbagecan" as GarbageCans.
+	Understand "dumpster" as GarbageCans.
+	Understand "trash" as GarbageCans.
+	The description of GarbageCans is "A couple of garbage cans that are no longer in use.  They look pretty disgusting as it hasn't been touched in many, many years."
 
 [Pager is a NPC]
 Pager is a man in Main Arcade Room.
