@@ -740,7 +740,9 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
     </item>
     <item nodeId="node-1050">
         <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">[Your score has just gone up by one point.]
+        <result xml:space="preserve">Now you can see things easier.
+
+[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -757,7 +759,8 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1065"></child>
+        <children><child nodeId="node-1951"></child>
+            <child nodeId="node-1065"></child>
             <child nodeId="node-1063"></child>
             <child nodeId="node-1058"></child>
             <child nodeId="node-1052"></child>
@@ -926,6 +929,152 @@ Large aracde with machines.
 You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1951">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Party Room
+This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1952"></child>
+        </children>
+    </item>
+    <item nodeId="node-1952">
+        <command xml:space="preserve">take paddles</command>
+        <result xml:space="preserve">The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1953"></child>
+        </children>
+    </item>
+    <item nodeId="node-1953">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Arcade Room
+Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1954"></child>
+        </children>
+    </item>
+    <item nodeId="node-1954">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Hockey Table Room
+This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.
+
+You can see Air Hockey Table here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1955"></child>
+        </children>
+    </item>
+    <item nodeId="node-1955">
+        <command xml:space="preserve">put paddles on hockey table</command>
+        <result xml:space="preserve">Putting things on Air Hockey Table would achieve nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1956"></child>
+        </children>
+    </item>
+    <item nodeId="node-1956">
+        <command xml:space="preserve">place paddles on top of hockey table</command>
+        <result xml:space="preserve">Where is the puck?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1957"></child>
+        </children>
+    </item>
+    <item nodeId="node-1957">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Main Arcade Room
+Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1958"></child>
+        </children>
+    </item>
+    <item nodeId="node-1958">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1959"></child>
+        </children>
+    </item>
+    <item nodeId="node-1959">
+        <command xml:space="preserve">take puck</command>
+        <result xml:space="preserve">The pager glows once again and says: If you have the paddles and quarter, it's time to play.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1960"></child>
+        </children>
+    </item>
+    <item nodeId="node-1960">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Arcade Room
+Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1961"></child>
+        </children>
+    </item>
+    <item nodeId="node-1961">
+        <command xml:space="preserve">take quarter</command>
+        <result xml:space="preserve">The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1962"></child>
+        </children>
+    </item>
+    <item nodeId="node-1962">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Hockey Table Room
+This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.
+
+You can see Air Hockey Table here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1963"></child>
+        </children>
+    </item>
+    <item nodeId="node-1963">
+        <command xml:space="preserve">insert quarter into hockey table</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1964"></child>
+        </children>
+    </item>
+    <item nodeId="node-1964">
+        <command xml:space="preserve">place puck on top of hockey table</command>
+        <result xml:space="preserve">&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1379">
@@ -1433,6 +1582,7 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1110"></child>
             <child nodeId="node-1102"></child>
+            <child nodeId="node-1943"></child>
             <child nodeId="node-1099"></child>
             <child nodeId="node-1382"></child>
             <child nodeId="node-1400"></child>
@@ -1652,6 +1802,62 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
         <result xml:space="preserve">
 Darkness
 It is pitch dark, and you can't see a thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1943">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Food Counter
+This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, "Food and Drink", and a pizza poster.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1944"></child>
+        </children>
+    </item>
+    <item nodeId="node-1944">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1945"></child>
+        </children>
+    </item>
+    <item nodeId="node-1945">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Back Alley
+A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1946"></child>
+        </children>
+    </item>
+    <item nodeId="node-1946">
+        <command xml:space="preserve">unlock electric box</command>
+        <result xml:space="preserve">What do you want to unlock Electric Box with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1947"></child>
+        </children>
+    </item>
+    <item nodeId="node-1947">
+        <command xml:space="preserve">key</command>
+        <result xml:space="preserve">You unlock Electric Box.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1948"></child>
+        </children>
+    </item>
+    <item nodeId="node-1948">
+        <command xml:space="preserve">end game</command>
+        <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

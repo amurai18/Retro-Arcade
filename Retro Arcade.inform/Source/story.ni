@@ -170,7 +170,9 @@ Hockey Table Room is dark.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
 	
 [Hockey Table]
-Table1 is a container.
+Table1 is a device. 
+Table1 can be switched on.
+Table1 is switched off.
 	The printed name of Table1 is "Air Hockey Table".
 	Understand "hockey table" as Table1.
 	Understand "table" as Table1.
@@ -183,16 +185,23 @@ Table1 is a container.
 	The Table1 can be unlocked.
 	
 [Unlocking table]
-An every turn rule:
-	If player is carrying quarter:
-		If player is carrying paddles:
-			If player is carrying puck:
-				Now Table1 is unlocked;
-	Otherwise:
-		Continue the action.
+
+[After placing puck on Table1:
+	if paddles is on Table1:
+		if quarter is inserted in Table1:
+			Switch table1 on;
+				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
+
+]
+[	If player placing paddles on top of Table1;
+		If player placing puck on top of table1;
+			If player inserting quarter into table1;
+				Switch table1 on;
+					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
+]
 	
-	The Table1 is fixed in place.
-	The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
+Table1 is fixed in place.
+The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
 
 Food Counter is northeast of Main Arcade Room. 
 Food Counter is dark.
@@ -201,8 +210,14 @@ Food Counter is dark.
 Key is in Food Counter.
 Key is undescribed.
 Key unlocks Electric Box.
+The description of key is "This looks like it could be used to unlock the Electric Box...".
+Instead of looking behind RedCounter:
+	say "You found the key for the Electric Box!";
+	move key to player.
 
-RedCounter is scenery in Food Counter.
+RedCounter is a thing in Food Counter.
+RedCounter is fixed in place.
+Redcounter is undescribed.
 
 NeonSign is scenery in Food Counter.
 
@@ -217,7 +232,7 @@ Electric Box is a container in Back Alley.
 Electric Box is locked.
 Electric Box is undescribed.
 Electric box is fixed in place.
-The description of electric box is "The box is currently locked, but it looks like a key will unlock it.".  
+The description of electric box is "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.".  
 
 GarbageCans is scenery in Back Alley.
 	The printed name of GarbageCans is "Garbage Cans".
@@ -330,11 +345,16 @@ Machine4 is an object in Main Arcade Room.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
 	
+Unlocking is an action applying to two things.
+	Understand "unlock [something] with [something]" as unlocking.
+
 [End]
-An every turn rule:
-	if player unlocks Electric box:
-		say "The power turned on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
-		end the story finally.
+[Every turn rule:
+	After player switches Table1 on:
+		if player unlocks Electric box:
+			say "The power turned on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
+			end the story finally. 
+			]
 
 
 [Fastest Way to win game]
