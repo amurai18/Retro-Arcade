@@ -109,9 +109,37 @@ Boxes is undescribed.
 Boxes is fixed in place.
 The description of boxes is "A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.".
 Understand "box" as boxes.
+Understand "dusty cardboard boxes" as boxes.
+Understand "cardboard boxes" as boxes.
+Understand "dusty boxes" as boxes.
+Understand "cardboard box" as boxes.
+Understand "pyramid" as boxes.
+Understand "boxes" as boxes.
+Understand "stack of boxes" as boxes.
+Understand "corner boxes" as boxes.
+Understand "cardboardboxes" as boxes.
+Understand "cardboardbox" as boxes.
 
 Looking behind is an action applying to one thing and requiring light.
 	Understand "Look behind [something]" as looking behind.
+	Understand "Look behind the [something]" as looking behind.
+	Understand "peak behind [something]" as looking behind.
+	Understand "Look over [something]" as looking behind.
+	Understand "Look around the [something]" as looking behind.
+	Understand "Look through the [something]" as looking behind.
+
+Moving is an action applying to one thing.
+	Understand "move [something]" as moving.
+	Understand "move the [something]" as moving.
+	Understand "move [something] to the side" as moving.
+	Understand "move [something] aside" as moving.
+	Understand "move the [something] to the side" as moving.
+
+Instead of moving the boxes:
+	say "You don't really want to touch them as they are super old and moldy.  They also seem really heavy, therefore they won't really budge.  Maybe you could see behind them...".
+	
+Instead of opening the boxes:
+	say "The boxes are sealed shut.  There doesn't seem to be anything special in the boxes.  But it looks like something might be behind it...".
 
 Placing is an action applying to two things.
 	Understand "Place [something] on top of [something]" as placing.
