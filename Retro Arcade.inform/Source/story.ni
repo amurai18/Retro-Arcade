@@ -186,6 +186,12 @@ Controls is an object.
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	Understand "Pac Man" as Machine1.
+	Understand "Pac-Man" as Machine1.
+	Understand "PacMan" as Machine1.
+	Understand "Pac Man" as Machine1.
+	Understand "Pac Man Game" as Machine1.
+	Understand "Pac Man Machine" as Machine1.
+	Understand "Pac-Man game" as Machine1.
 	The printed name of Machine1 is "Pac-Man".
 	Machine1 is fixed in place.
 	Machine1 is not edible.  
@@ -193,18 +199,32 @@ Machine1 is an object in Main Arcade Room.
 	
 Machine2 is an object in Main Arcade Room.
 	The printed name of Machine2 is "Space Invaders".
+	Understand "Space" as Machine2.
+	Understand "Invaders" as Machine2.
+	Understand "space-invaders" as Machine2.
+	Understand "spaceinvaders" as Machine2.
+	Understand "space invaders game" as Machine2.
+	Understand "Space invaders machine" as Machine2.
 	Machine2 is fixed in place.
 	Machine2 is not edible.
 	The description of Machine2 is "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop.  The control pad seems to be faded and dusty.  Nothing special seems to stick out.".
 	
 Machine3 is an object in Main Arcade Room.
 	The printed name of Machine3 is "Donkey Kong".
+	Understand "Donkey" as Machine3.
+	Understand "kong" as Machine3.
+	Understand "DonkeyKong" as Machine3.
+	Understand "Donkey-kong" as Machine3.
+	Understand "Donkey Kong Machine" as Machine3.
+	Understand "Donkey Kong Game" as Machine3.
 	Machine3 is fixed in place.
 	Machine3 is not edible.
 	The description of Machine3 is "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors really seem to pop off the machine.  Impressive for a game released in 1981.  Nothing special seems to stick out.".
 	
 Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
+	Understand "Tetris Machine" as Machine4.
+	Understand "Tetris game" as Machine4.
 	Machine4 is fixed in place.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
