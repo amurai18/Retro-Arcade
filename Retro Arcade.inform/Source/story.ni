@@ -13,8 +13,8 @@ To say exit list:
 
 [Scoring System]
 Use scoring.
-The target score is a number variable.  The target score is 10.
-	The maximum score is 10.
+The target score is a number variable.  The target score is 5.
+	The maximum score is 5.
 	Use the serial comma.
 
 After taking the pager for the first time:
@@ -22,10 +22,12 @@ After taking the pager for the first time:
 	say "Looks like it will help you along the way.  You should keep it if you need hints.".
 
 After taking quarter for the first time:
-	increase score by 1.
+	increase score by 1;
+		say "This seems like "
 
 After switching on flashlight for the first time:
-	increase score by 1.
+	increase score by 1;
+		say "Now you can see things easier.".
 
 After taking paddles for the first time:
 	increase score by 1.
@@ -45,9 +47,6 @@ When game begins:
 	Notepad is an object.
 		Player is carrying Notepad.
 		The description of notepad is "Your trusty notepad that you have used over the past year.  It's riddled with sketches, doodles, and useless notes from stories that didn't make the website.  But, things will change with this story!".
-	Phone is an object.
-		Player is carrying Phone.
-		The description of Phone is "An off brand phone that was assigned to you for stories.  It has standard call and text options, but no app store.  It also comes with a flashlight and bluetooth.".
 	Flashlight is a device.
 		Player is carrying Flashlight.
 		The description of Flashlight is "The flashlight from your phone.".
@@ -61,6 +60,8 @@ Carry out switching on flashlight:
 	now flashlight is lit.
 Carry out switching off flashlight:
 	now flashlight is unlit.
+Understand "turn on [something]" as switching on.
+Understand "use [something]" as switching on.
 	
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
@@ -249,7 +250,9 @@ An every turn rule:
  take puck
  go to hockey table
  place paddles and puck on top of table
- insert quarter]
+ insert quarter
+ go to the back alley
+ ]
 
 
 

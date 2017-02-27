@@ -11,7 +11,7 @@ As you walk up to the old, abandoned building on Elk Street, a chill runs down y
 
 Retro Arcade
 An Interactive Fiction by Aaron Murai
-Release 1 / Serial number 170223 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170226 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Outside
 Outside the abonded building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...
@@ -295,16 +295,14 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
     </item>
     <item nodeId="node-1030">
         <command xml:space="preserve">use flashlight</command>
-        <result xml:space="preserve">That's not a verb I recognise.
+        <result xml:space="preserve">[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1031">
         <command xml:space="preserve">turn on flashlight</command>
-        <result xml:space="preserve">Now you can see.
-
-[Your score has just gone up by one point.]
+        <result xml:space="preserve">[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -315,7 +313,7 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Arcade Room
-Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.
+ This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. 
 
 You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
@@ -324,7 +322,60 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
         <children><child nodeId="node-1040"></child>
             <child nodeId="node-1038"></child>
             <child nodeId="node-1033"></child>
+            <child nodeId="node-1301"></child>
         </children>
+    </item>
+    <item nodeId="node-1301">
+        <command xml:space="preserve">x pac man</command>
+        <result xml:space="preserve">A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1302"></child>
+        </children>
+    </item>
+    <item nodeId="node-1302">
+        <command xml:space="preserve">x pacman</command>
+        <result xml:space="preserve">A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1303"></child>
+        </children>
+    </item>
+    <item nodeId="node-1303">
+        <command xml:space="preserve">x space</command>
+        <result xml:space="preserve">Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop.  The control pad seems to be faded and dusty.  Nothing special seems to stick out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1304"></child>
+        </children>
+    </item>
+    <item nodeId="node-1304">
+        <command xml:space="preserve">x invaders</command>
+        <result xml:space="preserve">Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop.  The control pad seems to be faded and dusty.  Nothing special seems to stick out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1305"></child>
+        </children>
+    </item>
+    <item nodeId="node-1305">
+        <command xml:space="preserve">x pac-man</command>
+        <result xml:space="preserve">A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1306"></child>
+        </children>
+    </item>
+    <item nodeId="node-1306">
+        <command xml:space="preserve">x controls</command>
+        <result xml:space="preserve">It's used to control Pac-Man.  There is a dusty quarter next to it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1033">
         <command xml:space="preserve">use flashlight</command>
