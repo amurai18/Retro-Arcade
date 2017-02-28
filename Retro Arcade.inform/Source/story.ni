@@ -53,6 +53,15 @@ When game begins:
 	Flashlight is a device.
 		Player is carrying Flashlight.
 		The description of Flashlight is "The flashlight from your phone.".
+	Phone is an object.
+		Player is carrying Phone.
+		The description of phone is "A standard phone.  There is no real use for calling or texting anyone.".
+Instead of switching on phone:
+	say "There is nothing useful to use your phone.".
+Instead of switching on notepad:
+	say "You are already taking notes.".
+Instead of switching on pen:
+	say "You are already taking notes.".
 
 [Flashlight and Dark Rooms]
 A device can be lit or unlit.  A device is usually unlit.
@@ -77,16 +86,19 @@ Spawn is south of Main Arcade Room.
 The Main Arcade Room is dark.
 
 [Help from Mrs. Kiang]
-The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The door to the back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
+The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
 	
 Bathroom is west of Main Arcade Room. 
 Bathroom is dark.
-	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.".
+	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.  There's only a sink in here as the toilets were destroyed.".
 [Hockey Puck]
-Puck is an object in Bathroom.
+Puck is on top of the sink.
 The printed name of puck is "Air Hockey Puck".
 The description of puck is "A neon green air hockey puck.".
 Puck is undescribed.
+
+Sink is scenery in Bathroom. 
+The description of the sink is "A normal white sink with dust in the middle.  There seems to be...Oh hey it's the puck.  It looks like a bar of soap.".
 
 [Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
@@ -185,14 +197,11 @@ Table1 is switched off.
 	The Table1 can be unlocked.
 	
 [Unlocking table]
-
-[After placing puck on Table1:
-	if paddles is on Table1:
-		if quarter is inserted in Table1:
-			Switch table1 on;
-				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
-
+[
+				Switch table1 on;
+					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
 ]
+
 [	If player placing paddles on top of Table1;
 		If player placing puck on top of table1;
 			If player inserting quarter into table1;
@@ -207,27 +216,53 @@ Food Counter is northeast of Main Arcade Room.
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
 	
+Key is an object.
 Key is in Food Counter.
 Key is undescribed.
 Key unlocks Electric Box.
-The description of key is "This looks like it could be used to unlock the Electric Box...".
-Instead of looking behind RedCounter:
-	say "You found the key for the Electric Box!";
-	move key to player.
+Key can be found.  
+Key is not found.
+The description of key is "A shiny, metal key that sparkles in your flashlight.  There is a little lightning bolt inscribed in the key.  It must mean power.".
+Instead of looking behind the redcounter:
+	If key is found:
+		say "There is nothing else here.";
+	Otherwise:
+		now key is found;
+		now player carries key;
+		say "You found a key!  It might be useful for turning on something...".
 
 RedCounter is a thing in Food Counter.
 RedCounter is fixed in place.
 Redcounter is undescribed.
+The printed name of redcounter is "Counter".
+Understand "red counter" as redcounter.
+Understand "counter" as redcounter.
+Understand "the counter" as redcounter.
+Understand "bright red counter" as redcounter.
 
 NeonSign is scenery in Food Counter.
+The printed name of NeonSign is "Neon Sign".
+Understand "neon sign" as neonsign.
+Understand "sign" as neonsign.
+Understand "neon" as neonsign.
+Understand "neonsign" as neonsign.
+The description of neonsign is "It isn't glowing right now but the reflection of your flashlight off the sign hits a shiny metal object behind the counter.  It looks like a key....".
 
 PizzaPoster is scenery in Food Counter.
+The printed name of PizzaPoster is "Pizza Poster".
+Understand "poster" as pizzaposter.
+Understand "pizza poster" as pizzaposter.
+Understand "the poster" as pizzaposter.
+Understand "pizzaposter" as pizzaposter.
+
+
+
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
 Back Alley is dark.
 	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.".
-	
+[The electric box that turns on the power.  Once you unlock it with the key, you should win.]
 Electric Box is a container in Back Alley.
 Electric Box is locked.
 Electric Box is undescribed.
@@ -341,6 +376,7 @@ Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
 	Understand "Tetris Machine" as Machine4.
 	Understand "Tetris game" as Machine4.
+	Understand "Tetris" as Machine4.
 	Machine4 is fixed in place.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
