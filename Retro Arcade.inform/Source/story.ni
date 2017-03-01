@@ -54,12 +54,15 @@ When game begins:
 	Phone is an object.
 		Player is carrying Phone.
 		The description of phone is "A standard phone.  There is no real use for calling or texting anyone.".
+[Custom text if player tries to use phone, notepad or pen.]
 Instead of switching on phone:
 	say "There is nothing useful to use your phone.".
 Instead of switching on notepad:
 	say "You are already taking notes.".
 Instead of switching on pen:
 	say "You are already taking notes.".
+Instead of playing phone:
+	say "There isn't really much to do on your phone.".
 [Flashlight and Dark Rooms]
 A device can be lit or unlit.  A device is usually unlit.
 The flashlight is unlit.
@@ -138,10 +141,11 @@ Instead of moving the boxes:
 	say "You don't really want to touch them as they are super old and moldy.  They also seem really heavy, therefore they won't really budge.  Maybe you could see behind them...".
 Instead of opening the boxes:
 	say "The boxes are sealed shut.  There doesn't seem to be anything special in the boxes.  But it looks like something might be behind it...".
-[New Action ]
+[New Action definition]
 Placing is an action applying to two things.
 	Understand "Place [something] on top of [something]" as placing.
 	Understand "Place [something] on [something]" as placing.
+[If player tries to place paddles but doesn't have it, say where are the paddles?]
 Check placing:
 	If player is not carrying the paddles:
 		say "Where are the paddles?";
@@ -149,7 +153,6 @@ Check placing:
 		say "Where is the puck?";
 	Otherwise:
 		Continue the action.
-
 Hockey Paddles is a thing.
 Hockey paddles is in Party Room.
 Understand "Paddles" as Hockey Paddles.
@@ -169,6 +172,9 @@ Hockey Table Room is northwest of Main Arcade Room.
 Hockey Table Room is dark.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
 [Hockey Table]
+[Player can't play with hockey table b/c power is turned off.]
+Instead of playing Table1:
+	say "You can't play with the air hockey table as the power is turned off.  Shucks.".
 Table1 is a thing. A Table1 can be on or off. Table1 is off.
 	The printed name of Table1 is "Air Hockey Table".
 	Understand "hockey table" as Table1.
@@ -333,6 +339,12 @@ Controls is an object.
 
 [Arcade Machines]
 [They have seperate descriptions, but you can't play them as the electricity is off.]
+[When player tries to play machine, it says you can't]
+Instead of playing Machine1:
+	say "You can't play the arcade machines as the power is turned off.  Shucks.".
+[Dirt, dust, and spider webs.]
+Dirt is scenery in Main Arcade Room.
+
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	Understand "Pac Man" as Machine1.
@@ -346,7 +358,8 @@ Machine1 is an object in Main Arcade Room.
 	Machine1 is fixed in place.
 	Machine1 is not edible.  
 	The description of Machine1 is "A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?".
-	
+Instead of playing Machine2:
+	say "You can't play the arcade machines as the power is turned off.  Shucks.".
 Machine2 is an object in Main Arcade Room.
 	The printed name of Machine2 is "Space Invaders".
 	Understand "Space" as Machine2.
@@ -358,7 +371,8 @@ Machine2 is an object in Main Arcade Room.
 	Machine2 is fixed in place.
 	Machine2 is not edible.
 	The description of Machine2 is "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop at my office.  Nothing special seems to stick out.".
-	
+Instead of playing Machine3:
+	say "You can't play the arcade machines as the power is turned off.  Shucks.".	
 Machine3 is an object in Main Arcade Room.
 	The printed name of Machine3 is "Donkey Kong".
 	Understand "Donkey" as Machine3.
@@ -370,7 +384,8 @@ Machine3 is an object in Main Arcade Room.
 	Machine3 is fixed in place.
 	Machine3 is not edible.
 	The description of Machine3 is "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors of the game used to pop off the screen.  Too bad it doesn't work.  Impressive for a game released in 1981.  Nothing special seems to stick out.".
-	
+Instead of playing Machine4:
+	say "You can't play the arcade machines as the power is turned off.  Shucks.".
 Machine4 is an object in Main Arcade Room.
 	The printed name of Machine4 is "Tetris".
 	Understand "Tetris Machine" as Machine4.
@@ -379,11 +394,15 @@ Machine4 is an object in Main Arcade Room.
 	Machine4 is fixed in place.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
-	
+[New unlocking action]
 Unlocking is an action applying to two things.
 	Understand "unlock [something] with [something]" as unlocking.
+[Playing action, people commonly want to play with phone or games, but they can't.]
+Playing is an action applying to one thing.
+	Understand "play [something]" as playing.
+	Understand "play with [something]" as playing.
 
-[End]
+[End.  Player must have puck, paddles, and quarter, and then unlock the box with the key to win.]
 After unlocking Electric Box with key:
 	If player has puck:
 		If player has paddles:

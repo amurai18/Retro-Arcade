@@ -20,6 +20,7 @@ Outside the abandoned building, you don't know what to expect.  As long as you h
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1500"></child>
             <child nodeId="node-1240"></child>
+            <child nodeId="node-1620"></child>
             <child nodeId="node-1144"></child>
             <child nodeId="node-1140"></child>
             <child nodeId="node-1139"></child>
@@ -584,9 +585,31 @@ Outside the abonded building, you don't know what to expect.  As long as you hav
     </item>
     <item nodeId="node-1582">
         <command xml:space="preserve">use light</command>
-        <result xml:space="preserve">Now you can see things easier.
+        <result xml:space="preserve">Now you can see things easier with the flashlight from your phone.
 
 [Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1618"></child>
+        </children>
+    </item>
+    <item nodeId="node-1618">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Arcade Room
+ This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. 
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1619"></child>
+        </children>
+    </item>
+    <item nodeId="node-1619">
+        <command xml:space="preserve">play pac-man</command>
+        <result xml:space="preserve">You can't play the arcade machines as the power is turned off.  Shucks.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2765,6 +2788,94 @@ A dark and dank back alley.  It seems really dirty and rats sneak in and out pas
     <item nodeId="node-1239">
         <command xml:space="preserve">end game</command>
         <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1620">
+        <command xml:space="preserve">play phone</command>
+        <result xml:space="preserve">There isn't really much to do on your phone.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1621"></child>
+        </children>
+    </item>
+    <item nodeId="node-1621">
+        <command xml:space="preserve">play with phone</command>
+        <result xml:space="preserve">There isn't really much to do on your phone.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1622"></child>
+        </children>
+    </item>
+    <item nodeId="node-1622">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Darkness
+It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you have a source of light already...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1623"></child>
+        </children>
+    </item>
+    <item nodeId="node-1623">
+        <command xml:space="preserve">use light</command>
+        <result xml:space="preserve">Now you can see things easier with the flashlight from your phone.
+
+Main Arcade Room
+ This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. 
+
+You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1624"></child>
+        </children>
+    </item>
+    <item nodeId="node-1624">
+        <command xml:space="preserve">play space</command>
+        <result xml:space="preserve">You can't play the arcade machines as the power is turned off.  Shucks.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1625"></child>
+        </children>
+    </item>
+    <item nodeId="node-1625">
+        <command xml:space="preserve">play kong</command>
+        <result xml:space="preserve">You can't play the arcade machines as the power is turned off.  Shucks.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1626"></child>
+        </children>
+    </item>
+    <item nodeId="node-1626">
+        <command xml:space="preserve">play tetris</command>
+        <result xml:space="preserve">You can't play the arcade machines as the power is turned off.  Shucks.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1627"></child>
+        </children>
+    </item>
+    <item nodeId="node-1627">
+        <command xml:space="preserve">x tetris</command>
+        <result xml:space="preserve">One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1628"></child>
+        </children>
+    </item>
+    <item nodeId="node-1628">
+        <command xml:space="preserve">x dust</command>
+        <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
