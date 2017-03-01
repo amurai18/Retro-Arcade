@@ -344,6 +344,15 @@ Instead of playing Machine1:
 	say "You can't play the arcade machines as the power is turned off.  Shucks.".
 [Dirt, dust, and spider webs.]
 Dirt is scenery in Main Arcade Room.
+	The description of dirt is "Regular dirt from years of inactivity.  Pretty gross.".
+Dust is scenery in Main Arcade Room.
+	The description of dust is "A buildup of many different small particles.  Pretty much expected in an abandoned building.".
+Spider Webs is scenery in Main Arcade Room.
+	The description of spider webs is "Some gross spider webs on top of the machines.  It's all over... Gross.".
+	Understand "web" as spider webs.
+	Understand "spider web" as spider webs.
+	Understand "spider" as spider webs.
+	Understand "webs" as spider webs.
 
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.

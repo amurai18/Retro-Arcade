@@ -2879,6 +2879,42 @@ You can see Pager, Pac-Man, Space Invaders, Donkey Kong, and Tetris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1629"></child>
+        </children>
+    </item>
+    <item nodeId="node-1629">
+        <command xml:space="preserve">x pac man</command>
+        <result xml:space="preserve">A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1630"></child>
+        </children>
+    </item>
+    <item nodeId="node-1630">
+        <command xml:space="preserve">x kong</command>
+        <result xml:space="preserve">Donkey Kong?!  This is where Mario first appeared.  Wow, the colors of the game used to pop off the screen.  Too bad it doesn't work.  Impressive for a game released in 1981.  Nothing special seems to stick out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1631"></child>
+        </children>
+    </item>
+    <item nodeId="node-1631">
+        <command xml:space="preserve">x space</command>
+        <result xml:space="preserve">Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop at my office.  Nothing special seems to stick out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1632"></child>
+        </children>
+    </item>
+    <item nodeId="node-1632">
+        <command xml:space="preserve">x tetris</command>
+        <result xml:space="preserve">One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1240">
         <command xml:space="preserve">n</command>
