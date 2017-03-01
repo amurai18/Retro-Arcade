@@ -1,6 +1,5 @@
 [Front Matter]
 "Retro Arcade" by Aaron Murai
-The release number is 1. 
 The story creation year is 2017. 
 The story headline is "A Retro Mystery.". 
 The story genre is "Mystery". 
@@ -171,6 +170,8 @@ Hockey Table Room is dark.
 [Player can't play with hockey table b/c power is turned off.]
 Instead of playing Table1:
 	say "You can't play with the air hockey table as the power is turned off.  Shucks.".
+Table1 is fixed in place.
+The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition, but it's turned off.  If only you had the two paddles and a hockey puck, you could play it.  You look on the side to see that there is a coin slot that says '25 cents required'.  It looks like you could put the paddles and puck on top of the table, and then put the quarter in the coin slot".
 Table1 is a supporter.  
 Table1 can be on or off. 
 Table1 is off.
@@ -190,9 +191,10 @@ Table1 can be unlocked.
 An every turn rule:
 	if puck is on top of table1:
 		if paddles is on top of table1:
-			if Coin slot is unlocked:
+			if quarter is in coin slot:
 				now Table1 is on;
-				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
+				say "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.";
+				 say "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...".
 
 [Toggling is an action applying to one thing.
 Understand "toggle [something]" and "switch [something]" as toggling.
@@ -212,8 +214,6 @@ If player placing paddles on top of Table1;
 					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".]
 					
 [I tried to make it so that once you placed the paddles and puck on the table, and inserted the quarter, the table would "unlock" and say some special dialouge, but it wasn't working.  So, I made the table a device and once you have all the items, it switches on, which gives a hint to where the key is and then unlocking the electric box.]
-Table1 is fixed in place.
-The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  You look on the side to see that there is a coin slot that says '25 cents required'.".
 Food Counter is northeast of Main Arcade Room. 
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
@@ -279,18 +279,15 @@ GarbageCans is scenery in Back Alley.
 	Understand "dumpster" as GarbageCans.
 	Understand "trash" as GarbageCans.
 	The description of GarbageCans is "A couple of garbage cans that are no longer in use.  They look pretty disgusting as it hasn't been touched in many, many years."
-
 [Pager is like a NPC]
 Pager is a thing in Main Arcade Room.
 	The description of Pager is "The brightly lit green screen gives off some light.  Strange to find a working pager in an abandoned arcade.  Nevertheless, it seems useful.  Might as well take it.".
-
 [Inform 7 Handbook By Jim Aikin]
 [Tried to make pager an NPC, but decided to make it a thing that triggers after an event has occured]
 [Every turn:
 	if the location of Pager is not the location of the player:
 		let the way be the best route from the location of Pager to the location of the player;
 		try Pager going the way.]
-		
 Instead of taking Pager:
 	say "The pager glows and says: There might be some loose change in the Main Arcade Room.";
 	move Pager to player.
@@ -304,14 +301,14 @@ Instead of taking paddles:
 	say "The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...";
 	move paddles to player.
 [First Puzzle with Quarter]
+Quarter is an object.
 Quarter is undescribed.
-	The description of Quarter is "A normal quarter used to play games.".
-	Understand "coin" as quarter.
-	Understand "token" as quarter.
-	Understand "25 cents" as quarter.
-	Quarter unlocks Coin Slot.
-	The Quarter is not edible.
-	Quarter is on top of Machine1.			
+The description of Quarter is "A normal quarter used to play games.".
+Understand "coin" as quarter.
+Understand "token" as quarter.
+Understand "25 cents" as quarter.
+The Quarter is not edible.
+Quarter is on top of Machine1.			
 [If player has quarter, then the description of player changes.]
 An every turn rule:
 	If player is carrying quarter:
@@ -322,13 +319,14 @@ Check inserting:
 [A place for the quarter to go in.]
 [Help from Mrs. Kiang]
 Coin Slot is a container in Hockey Table Room. 
-	Coin slot is locked.
+	Coin slot is openable.
 	Coin slot is fixed in place.
 	Understand "slot" as Coin slot.
 	Coin slot is undescribed. 
 	The description of coin slot is "The coin slot for the air hockey table. Insert one quarter in coin slot to play air hockey. Only a quarter? What a deal!".
 After inserting quarter into Coin slot:
-	now coin slot is unlocked.
+	now coin slot is open;
+		say "It makes a clinking sound.".
 [Defining Inserting as an action]
 Inserting is an action applying to two things.
 	Understand "insert [something] into [something]" as inserting.
@@ -364,7 +362,7 @@ Spider Webs is scenery in Main Arcade Room.
 	Understand "spider web" as spider webs.
 	Understand "spider" as spider webs.
 	Understand "webs" as spider webs.
-Machine1 is an object in Main Arcade Room.  
+Machine1 is a supporter in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	Understand "Pac Man" as Machine1.
 	Understand "Pac-Man" as Machine1.
@@ -442,6 +440,11 @@ After unlocking Electric Box with key:
  x sink
  take puck 
  e
+ nw
+ put paddles on table
+ put puck on table
+ insert quarter into coin slot
+ se
  ne
  Look behind counter
  take key
