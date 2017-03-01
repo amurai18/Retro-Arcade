@@ -5,8 +5,6 @@ The story creation year is 2017.
 The story headline is "A Retro Mystery.". 
 The story genre is "Mystery". 
 The story description is "A retro, mystery of an abandoned arcade.  You are a young, eager news reporter that is investigating an arcade.  Will you be able to find the missing pieces in order to turn on the power?".
-
-
 [Navigation from Get that Cat]
 When play begins: 
 	now left hand status line is "Possible Exits: [exit list]"; 
@@ -16,34 +14,33 @@ To say exit list:
 	repeat with way running through directions: 
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
-
 [Scoring System]
 Use scoring.
 The target score is a number variable.  The target score is 6.
 	The maximum score is 6.
 	Use the serial comma.
-
 After taking the pager for the first time:
 	increase score by 1.
 After taking quarter for the first time:
 	increase score by 1.
 After switching on flashlight for the first time:
 	increase score by 1;
-		say "Now you can see things easier.".
+		say "Now you can see things easier with the flashlight from your phone.".
 After taking paddles for the first time:
 	increase score by 1.
 After taking puck for the first time:
 	increase score by 1.
 After unlocking electric box:
 	increase score by 1.
-
 [Start Descriptions and Inventory]
 The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
+After taking quarter for the first time:
+	Now the description of player is "You can feel the excitement on your face as things are starting to get interesting.".
 [Disabling take all]
 Rule for deciding whether all includes something: It does not.
 [Prolouge]
 When game begins:
-	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  While old, the building contains an abandoned arcade from long ago.".
+	Say "As you walk up to the old, abandoned building on Elk Street, a chill runs down your spine.  You have been informed that it used to be a popular arcade that faded out with the times.  It hasn't been touched in many, many years.  It seems pretty dark in the building, so you should probably find the switch for the electric box in order to turn the power on.  Maybe you will find something interesting to write about.".
 	Pen is an object.
 		Player is carrying pen.
 		The description of pen is "A new, ball point pen used for writing down notes.  Don't lose it!".
@@ -53,6 +50,7 @@ When game begins:
 	Flashlight is a device.
 		Player is carrying Flashlight.
 		The description of Flashlight is "The flashlight from your phone.".
+		Understand "light" as flashlight.
 	Phone is an object.
 		Player is carrying Phone.
 		The description of phone is "A standard phone.  There is no real use for calling or texting anyone.".
@@ -62,7 +60,6 @@ Instead of switching on notepad:
 	say "You are already taking notes.".
 Instead of switching on pen:
 	say "You are already taking notes.".
-
 [Flashlight and Dark Rooms]
 A device can be lit or unlit.  A device is usually unlit.
 The flashlight is unlit.
@@ -73,21 +70,17 @@ Carry out switching off flashlight:
 	now flashlight is unlit.
 Understand "turn on [something]" as switching on.
 Understand "use [something]" as switching on.
-	
 [Inform 7 Handbook By Jim Aikin]
 Rule for printing the description of a dark room:
 	say "It's super dark in here!  Well duh, if it's an abandoned building, there is no power.  Maybe you have a source of light already...".
-
 [Outside and Main Arcade]
 Spawn is a room.
 	The printed name of Spawn is "Outside".	
 	The description of spawn is "Outside the abandoned building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...".
 Spawn is south of Main Arcade Room.
 The Main Arcade Room is dark.
-
 [Help from Mrs. Kiang]
 The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
-	
 Bathroom is west of Main Arcade Room. 
 Bathroom is dark.
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.  There's only a sink in here as the toilets were destroyed.".
@@ -96,22 +89,19 @@ Puck is on top of the sink.
 The printed name of puck is "Air Hockey Puck".
 The description of puck is "A neon green air hockey puck.".
 Puck is undescribed.
-
 Sink is scenery in Bathroom. 
 The description of the sink is "A normal white sink with dust in the middle.  There seems to be...Oh hey it's the puck.  It looks like a bar of soap.".
-
 [Puzzle with hidden paddles behind boxes]
 Party Room is east of Main Arcade Room.
 Party Room is dark.
 	The description of Party Room is "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.".
-
 Tables is scenery in Party Room.
 	The printed name of tables is "Portable Tables".
 	Understand "table" as Tables.
 	Understand "portabletables" as tables.
 	The description of tables is "Just some portable, plastic tables.  These must've been used because they're easy to clean.  Understandable...".
 	Tables is undescribed.
-	
+[Boxes hide paddles]
 Boxes is a thing.
 Boxes is in Party Room.
 Boxes is undescribed.
@@ -128,7 +118,7 @@ Understand "stack of boxes" as boxes.
 Understand "corner boxes" as boxes.
 Understand "cardboardboxes" as boxes.
 Understand "cardboardbox" as boxes.
-
+[Look behind action for finding paddles and key]
 Looking behind is an action applying to one thing and requiring light.
 	Understand "Look behind [something]" as looking behind.
 	Understand "Look behind the [something]" as looking behind.
@@ -136,24 +126,22 @@ Looking behind is an action applying to one thing and requiring light.
 	Understand "Look over [something]" as looking behind.
 	Understand "Look around the [something]" as looking behind.
 	Understand "Look through the [something]" as looking behind.
-
+[Commonly used action for players]
 Moving is an action applying to one thing.
 	Understand "move [something]" as moving.
 	Understand "move the [something]" as moving.
 	Understand "move [something] to the side" as moving.
 	Understand "move [something] aside" as moving.
 	Understand "move the [something] to the side" as moving.
-
+[Can't move boxes or open them, makes them look behind.]
 Instead of moving the boxes:
 	say "You don't really want to touch them as they are super old and moldy.  They also seem really heavy, therefore they won't really budge.  Maybe you could see behind them...".
-	
 Instead of opening the boxes:
 	say "The boxes are sealed shut.  There doesn't seem to be anything special in the boxes.  But it looks like something might be behind it...".
-
+[New Action ]
 Placing is an action applying to two things.
 	Understand "Place [something] on top of [something]" as placing.
 	Understand "Place [something] on [something]" as placing.
-	
 Check placing:
 	If player is not carrying the paddles:
 		say "Where are the paddles?";
@@ -176,15 +164,12 @@ Instead of looking behind the boxes:
 		now paddles is found;
 		now player carries paddles;
 		say "You found the two missing paddles for the air hockey table.  Go put it on the table.".
-
+[Hockey Table Room]
 Hockey Table Room is northwest of Main Arcade Room.
 Hockey Table Room is dark.
 	The description of Hockey Table Room is "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.".
-	
 [Hockey Table]
-Table1 is a device. 
-Table1 can be switched on.
-Table1 is switched off.
+Table1 is a thing. A Table1 can be on or off. Table1 is off.
 	The printed name of Table1 is "Air Hockey Table".
 	Understand "hockey table" as Table1.
 	Understand "table" as Table1.
@@ -195,19 +180,34 @@ Table1 is switched off.
 	Table1 is in the Hockey Table Room.
 	The Table1 is locked.
 	The Table1 can be unlocked.
-	
+[Inform Handbook Jim Aikins]
 [Unlocking table]
-[
-				Switch table1 on;
-					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
-]
+[When player has all the objects, he/she can switch the table on.]
 
-[	If player placing paddles on top of Table1;
+[Toggling is an action applying to one thing.
+Understand "toggle [something]" and "switch [something]" as toggling.
+Check toggling:
+	if the noun is not a device:
+		say "[The noun] can't be toggled on and off.".
+Carry out toggling:
+	if the noun is switched off:
+		try switching on the noun instead;
+	otherwise:
+		continue the action.]
+
+Instead of turning on Table1:
+	if player is carrying the puck:
+		if player is carrying the paddles:
+			if player is carrying the quarter:
+				now Table1 is on;
+				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
+
+[If player placing paddles on top of Table1;
 		If player placing puck on top of table1;
 			If player inserting quarter into table1;
 				Switch table1 on;
-					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
-]
+					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".]
+[I tried to make it so that once you placed the paddles and puck on the table, and inserted the quarter, the table would "unlock" and say some special dialouge, but it wasn't working.  So, I made the table a device and once you have all the items, it switches on, which gives a hint to where the key is and then unlocking the electric box.]
 	
 Table1 is fixed in place.
 The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
@@ -215,7 +215,7 @@ The description of Table1 is "A bright, neon green and blue air hockey table.  I
 Food Counter is northeast of Main Arcade Room. 
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
-	
+[Key for electric box]
 Key is an object.
 Key is in Food Counter.
 Key is undescribed.
@@ -223,6 +223,7 @@ Key unlocks Electric Box.
 Key can be found.  
 Key is not found.
 The description of key is "A shiny, metal key that sparkles in your flashlight.  There is a little lightning bolt inscribed in the key.  It must mean power.".
+[look behind counter to find the key]
 Instead of looking behind the redcounter:
 	If key is found:
 		say "There is nothing else here.";
@@ -254,9 +255,6 @@ Understand "poster" as pizzaposter.
 Understand "pizza poster" as pizzaposter.
 Understand "the poster" as pizzaposter.
 Understand "pizzaposter" as pizzaposter.
-
-
-
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
@@ -334,6 +332,7 @@ Controls is an object.
 	Understand "pac-man controls" as controls.
 
 [Arcade Machines]
+[They have seperate descriptions, but you can't play them as the electricity is off.]
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	Understand "Pac Man" as Machine1.
@@ -385,35 +384,35 @@ Unlocking is an action applying to two things.
 	Understand "unlock [something] with [something]" as unlocking.
 
 [End]
-[Every turn rule:
-	After player switches Table1 on:
-		if player unlocks Electric box:
-			say "The power turned on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
-			end the story finally. 
-			]
+After unlocking Electric Box with key:
+	If player has puck:
+		If player has paddles:
+			If player has quarter:
+				say "You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
+				end the story finally.
+			
 
 
 [Fastest Way to win game]
-
 [turn on flashlight
- go north
- x Pac-man machine
+ n
+ x pac man
  x controls
- then take quarter
- go east
+ take quarter
+ e
  look behind boxes 
  take paddles
- go w, then west again
- take puck on sink
- go to hockey table
- place paddles and puck on top of table
- insert quarter
- Go to food counter
+ w 
+ w
+ x sink
+ take puck 
+ e
+ ne
  Look behind counter
- Find key to electic box
- go to the back alley
+ take key
+ nw
  unlock electric box with key
- the end.]
+ ]
 
 
 
