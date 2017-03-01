@@ -16,8 +16,8 @@ To say exit list:
 		if place is a room, say " [way]".
 [Scoring System]
 Use scoring.
-The target score is a number variable.  The target score is 6.
-	The maximum score is 6.
+The target score is a number variable.  The target score is 5.
+	The maximum score is 5.
 	Use the serial comma.
 After taking the pager for the first time:
 	increase score by 1.
@@ -30,12 +30,7 @@ After taking paddles for the first time:
 	increase score by 1.
 After taking puck for the first time:
 	increase score by 1.
-After unlocking electric box:
-	increase score by 1.
-[Start Descriptions and Inventory]
-The description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
-After taking quarter for the first time:
-	Now the description of player is "You can feel the excitement on your face as things are starting to get interesting.".
+[Start Descriptions and Inventory]	
 [Disabling take all]
 Rule for deciding whether all includes something: It does not.
 [Prolouge]
@@ -54,6 +49,7 @@ When game begins:
 	Phone is an object.
 		Player is carrying Phone.
 		The description of phone is "A standard phone.  There is no real use for calling or texting anyone.".
+	the description of player is "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!".
 [Custom text if player tries to use phone, notepad or pen.]
 Instead of switching on phone:
 	say "There is nothing useful to use your phone.".
@@ -162,7 +158,7 @@ Hockey paddles can be found.
 Hockey paddles is not found.
 Instead of looking behind the boxes:
 	If paddles is found:
-		say "Just a lot of dirt, dust, and spider webs.";
+		say "Nothing much.";
 	Otherwise:
 		now paddles is found;
 		now player carries paddles;
@@ -175,20 +171,28 @@ Hockey Table Room is dark.
 [Player can't play with hockey table b/c power is turned off.]
 Instead of playing Table1:
 	say "You can't play with the air hockey table as the power is turned off.  Shucks.".
-Table1 is a thing. A Table1 can be on or off. Table1 is off.
-	The printed name of Table1 is "Air Hockey Table".
+Table1 is a supporter.  
+Table1 can be on or off. 
+Table1 is off.
+The printed name of Table1 is "Air Hockey Table".
 	Understand "hockey table" as Table1.
 	Understand "table" as Table1.
 	Understand "air hockey table" as Table1.
 	Understand "hockeytable" as Table1.
 	Understand "hockey-table" as Table1.
 	Understand "airhockeytable" as Table1.
-	Table1 is in the Hockey Table Room.
-	The Table1 is locked.
-	The Table1 can be unlocked.
+Table1 is in the Hockey Table Room.
+Table1 is locked.
+Table1 can be unlocked.
 [Inform Handbook Jim Aikins]
 [Unlocking table]
 [When player has all the objects, he/she can switch the table on.]
+An every turn rule:
+	if puck is on top of table1:
+		if paddles is on top of table1:
+			if Coin slot is unlocked:
+				now Table1 is on;
+				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
 
 [Toggling is an action applying to one thing.
 Understand "toggle [something]" and "switch [something]" as toggling.
@@ -199,25 +203,17 @@ Carry out toggling:
 	if the noun is switched off:
 		try switching on the noun instead;
 	otherwise:
-		continue the action.]
-
-Instead of turning on Table1:
-	if player is carrying the puck:
-		if player is carrying the paddles:
-			if player is carrying the quarter:
-				now Table1 is on;
-				say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".
-
-[If player placing paddles on top of Table1;
+		continue the action.
+		
+If player placing paddles on top of Table1;
 		If player placing puck on top of table1;
 			If player inserting quarter into table1;
 				Switch table1 on;
 					say "You have all the components of the Air Hockey Table.  Now, just find the key that unlocks the Electric Box so you can turn on the power.".]
+					
 [I tried to make it so that once you placed the paddles and puck on the table, and inserted the quarter, the table would "unlock" and say some special dialouge, but it wasn't working.  So, I made the table a device and once you have all the items, it switches on, which gives a hint to where the key is and then unlocking the electric box.]
-	
 Table1 is fixed in place.
-The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  On the side, there is a sign that says '25 cents required'.".
-
+The description of Table1 is "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition.  If only you had the two paddles and a hockey puck, you could play it.  You look on the side to see that there is a coin slot that says '25 cents required'.".
 Food Counter is northeast of Main Arcade Room. 
 Food Counter is dark.
 	The description of Food Counter is "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, 'Food and Drink', and a pizza poster.".
@@ -268,7 +264,7 @@ Back Alley is dark.
 	The description of Back Alley is "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.".
 [The electric box that turns on the power.  Once you unlock it with the key, you should win.]
 Electric Box is a container in Back Alley.
-Electric Box is locked.
+Electric Box is locked and lockable.
 Electric Box is undescribed.
 Electric box is fixed in place.
 The description of electric box is "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.".  
@@ -298,25 +294,42 @@ Pager is a thing in Main Arcade Room.
 Instead of taking Pager:
 	say "The pager glows and says: There might be some loose change in the Main Arcade Room.";
 	move Pager to player.
-
 Instead of taking quarter:
 	say "The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?";
 	move quarter to player.
-
 Instead of taking puck:
 	say "The pager glows once again and says: If you have the paddles and quarter, it's time to play.";
 	move puck to player.
-	
 Instead of taking paddles:
 	say "The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...";
 	move paddles to player.
-
 [First Puzzle with Quarter]
 Quarter is undescribed.
 	The description of Quarter is "A normal quarter used to play games.".
+	Understand "coin" as quarter.
+	Understand "token" as quarter.
+	Understand "25 cents" as quarter.
+	Quarter unlocks Coin Slot.
 	The Quarter is not edible.
-	Quarter is on top of Machine1.
-
+	Quarter is on top of Machine1.			
+[If player has quarter, then the description of player changes.]
+An every turn rule:
+	If player is carrying quarter:
+		Now description of player is "You can feel the excitement on your face as things are starting to get interesting.".	
+Check inserting:
+	If player is not carrying quarter:
+		say "You don't have a quarter.  I think there might be one near the arcade machines.".
+[A place for the quarter to go in.]
+[Help from Mrs. Kiang]
+Coin Slot is a container in Hockey Table Room. 
+	Coin slot is locked.
+	Coin slot is fixed in place.
+	Understand "slot" as Coin slot.
+	Coin slot is undescribed. 
+	The description of coin slot is "The coin slot for the air hockey table. Insert one quarter in coin slot to play air hockey. Only a quarter? What a deal!".
+After inserting quarter into Coin slot:
+	now coin slot is unlocked.
+[Defining Inserting as an action]
 Inserting is an action applying to two things.
 	Understand "insert [something] into [something]" as inserting.
 	Understand "put [something] into [something]" as inserting.
@@ -324,7 +337,6 @@ Inserting is an action applying to two things.
 	Understand "insert [something] in the [something]" as inserting.
 	Understand "slide [something] into [something]" as inserting.
 	Understand "put [something] in the [something]" as inserting.
-
 [Gives a clue as to where quarter is]
 Controls is an object.
 	Controls is on top of Machine1.
@@ -336,7 +348,6 @@ Controls is an object.
 	Understand "game controls" as controls.
 	Understand "game control" as controls.
 	Understand "pac-man controls" as controls.
-
 [Arcade Machines]
 [They have seperate descriptions, but you can't play them as the electricity is off.]
 [When player tries to play machine, it says you can't]
@@ -353,7 +364,6 @@ Spider Webs is scenery in Main Arcade Room.
 	Understand "spider web" as spider webs.
 	Understand "spider" as spider webs.
 	Understand "webs" as spider webs.
-
 Machine1 is an object in Main Arcade Room.  
 	Understand "Pac-Man Machine" as Machine1.
 	Understand "Pac Man" as Machine1.
@@ -403,9 +413,6 @@ Machine4 is an object in Main Arcade Room.
 	Machine4 is fixed in place.
 	Machine4 is not edible.
 	The description of Machine4 is "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.".
-[New unlocking action]
-Unlocking is an action applying to two things.
-	Understand "unlock [something] with [something]" as unlocking.
 [Playing action, people commonly want to play with phone or games, but they can't.]
 Playing is an action applying to one thing.
 	Understand "play [something]" as playing.
