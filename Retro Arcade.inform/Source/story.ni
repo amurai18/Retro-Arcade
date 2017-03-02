@@ -197,7 +197,7 @@ An every turn rule:
 				if player is in hockey table room: [since it's an every turn rule, it will say the dialouge every single turn, therefore a fix is to make it so that only in the hockey table room will it say the dialouge.]
 					now table1 is on;
 					say "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.";
-					say "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...".
+					say "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees could have been...".
 [Toggling is an action applying to one thing.
 Understand "toggle [something]" and "switch [something]" as toggling.
 Check toggling:
@@ -257,6 +257,7 @@ The description of neonsign is "It isn't glowing right now but the reflection of
 PizzaPoster is an object in Food Counter.
 The printed name of PizzaPoster is "Pizza Poster".
 PizzaPoster is not edible.
+PizzaPoster is undescribed.
 Understand "poster" as pizzaposter.
 Understand "pizza poster" as pizzaposter.
 Understand "the poster" as pizzaposter.
@@ -270,13 +271,12 @@ Back Alley is dark.
 [The electric box that turns on the power.  Once you unlock it with the key, you should win.]
 Electric Box is a container in Back Alley.
 Electric Box is locked and lockable.
-Electric Box is undescribed.
 Electric box is fixed in place.
 The description of electric box is "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.".  
-An every turn rule:
+Check unlocking:
 	If table1 is on:
-		now Electric Box is described.
-
+		now electric box is described.
+	
 GarbageCans is scenery in Back Alley.
 	The printed name of GarbageCans is "Garbage Cans".
 	Understand "trash cans" as GarbageCans.
@@ -298,16 +298,20 @@ Pager is a thing in Main Arcade Room.
 		try Pager going the way.]
 Instead of taking Pager:
 	say "The pager glows and says: There might be some loose change in the Main Arcade Room.";
-	move Pager to player.
+	move Pager to player;
+	increase score by 1.
 Instead of taking quarter:
 	say "The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?";
-	move quarter to player.
+	move quarter to player;
+	increase score by 1.
 Instead of taking puck:
 	say "The pager glows once again and says: If you have the paddles and quarter, it's time to play.";
-	move puck to player.
+	move puck to player;
+	increase score by 1.
 Instead of taking paddles:
 	say "The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...";
-	move paddles to player.
+	move paddles to player;
+	increase score by 1.
 [First Puzzle with Quarter]
 Quarter is an object.
 Quarter is undescribed.
