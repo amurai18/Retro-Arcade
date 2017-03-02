@@ -11627,6 +11627,7 @@ Object -> I141_key ""
 Object -> I143_redcounter ""
     class K2_thing
     with short_name BC_310
+    with description BC_311
     has proper
     has static
     has concealed
@@ -11638,7 +11639,6 @@ Object -> I143_redcounter ""
     with name 'redcounter' 'things//p' 'counter' 
     with parse_name Parse_Name_GV101
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_311
     with initial BC_312
     with list_together BC_313
     with plural BC_314
@@ -11669,9 +11669,9 @@ Object -> I144_neonsign ""
 Object -> I145_pizzaposter ""
     class K2_thing
     with short_name BC_322
+    with description BC_323
     has proper
-    has static
-    has scenery
+    has ~edible
     with vector 0
     has mark_as_thing
     with IK2_Count 15
@@ -11680,7 +11680,6 @@ Object -> I145_pizzaposter ""
     with name 'pizzaposter' 'things//p' 'poster' 'pizzaposter' 
     with parse_name Parse_Name_GV103
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_323
     with initial BC_324
     with list_together BC_325
     with plural BC_326
@@ -12648,9 +12647,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Every turn (B8_every_turn)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/2 ! An every turn rule:
+! Rule 1/3 ! An every turn rule:
 !   === equally specific with ===
-! Rule 2/2 ! An every turn rule:
+! Rule 2/3 ! An every turn rule:
+!   === equally specific with ===
+! Rule 3/3 ! An every turn rule:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! An every turn rule:
@@ -12662,25 +12663,39 @@ Array ActionHappened --> 0 0 0 0 0 0;
         if (((I139_table1 == SupporterOf(I137_hockey_paddles))))
         {! [4: if quarter is in coin slot]
             if (((I151_coin_slot == ContainerOf(I149_quarter))))
-            {! [5: now table1 is on]
-                (Adj_87_t2_v10(I139_table1));
-                ! [6: say ~The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.~]
-                say__p=1;! [7: ~The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.~]
-                ParaContent(); print "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power."; new_line; .L_Say3; .L_SayX3;! [8: say ~The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...~]
-                say__p=1;! [9: ~The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...~]
-                ParaContent(); print "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work..."; new_line; .L_Say4; .L_SayX4;}
-                }
-                }
-                rfalse;
+            {! [5: if player is in hockey table room]
+                if (((I138_hockey_table_room == ContainerOf(player))))
+                {! [6: now table1 is on]
+                    (Adj_87_t2_v10(I139_table1));
+                    ! [7: say ~The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.~]
+                    say__p=1;! [8: ~The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.~]
+                    ParaContent(); print "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power."; new_line; .L_Say3; .L_SayX3;! [9: say ~The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...~]
+                    say__p=1;! [10: ~The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...~]
+                    ParaContent(); print "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work..."; new_line; .L_Say4; .L_SayX4;}
+                    }
+                    }
+                    }
+                    rfalse;
 ];
 ! No specific request
 ! An every turn rule:
-[ R_826 ;
-    if (debug_rules) DB_Rule(R_826, 826);
+[ R_822 ;
+    if (debug_rules) DB_Rule(R_822, 822);
+    ! [2: if table1 is on]
+    if ((((Adj_87_t1_v10(I139_table1)))))
+    {! [3: now electric box is described]
+        (Adj_63_t2_v10(I142_electric_box));
+        }
+        rfalse;
+];
+! No specific request
+! An every turn rule:
+[ R_827 ;
+    if (debug_rules) DB_Rule(R_827, 827);
     ! [2: if player is carrying quarter]
     if (((player == CarrierOf(I149_quarter))))
     {! [3: now description of player is ~You can feel the excitement on your face as things are starting to get interesting.~]
-        BlkValueCopy(GProperty(10, player,description), TX_L_107);
+        BlkValueCopy(GProperty(10, player,description), TX_L_109);
         }
         rfalse;
 ];
@@ -13269,106 +13284,106 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! Instead of taking Pager:
-[ R_822 ;
+[ R_823 ;
     if ((((action ==##Take) &&  (actor==player) && ((noun == I148_pager) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_822, 822);
+    if (debug_rules) DB_Rule(R_823, 823);
     ! [2: say ~The pager glows and says: There might be some loose change in the Main Arcade Room.~]
     say__p=1;! [3: ~The pager glows and says: There might be some loose change in the Main Arcade Room.~]
     ParaContent(); print "The pager glows and says: There might be some loose change in the Main Arcade Room."; new_line; .L_Say17; .L_SayX17;! [4: move pager to player]
     MoveObject(I148_pager, player, 0, false);
     RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_822, 822, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_823, 823, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of taking quarter:
-[ R_823 ;
+[ R_824 ;
     if ((((action ==##Take) &&  (actor==player) && ((noun == I149_quarter) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_823, 823);
+    if (debug_rules) DB_Rule(R_824, 824);
     ! [2: say ~The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?~]
     say__p=1;! [3: ~The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?~]
     ParaContent(); print "The pager glows again and says: If you had a birthday party, wouldn't you want to control the air hockey table?"; new_line; .L_Say18; .L_SayX18;! [4: move quarter to player]
     MoveObject(I149_quarter, player, 0, false);
     RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_823, 823, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_824, 824, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of taking puck:
-[ R_824 ;
+[ R_825 ;
     if ((((action ==##Take) &&  (actor==player) && ((noun == I132_puck) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_824, 824);
+    if (debug_rules) DB_Rule(R_825, 825);
     ! [2: say ~The pager glows once again and says: If you have the paddles and quarter, it's time to play.~]
     say__p=1;! [3: ~The pager glows once again and says: If you have the paddles and quarter, it's time to play.~]
     ParaContent(); print "The pager glows once again and says: If you have the paddles and quarter, it's time to play."; new_line; .L_Say19; .L_SayX19;! [4: move puck to player]
     MoveObject(I132_puck, player, 0, false);
     RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_824, 824, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_825, 825, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of taking paddles:
-[ R_825 ;
+[ R_826 ;
     if ((((action ==##Take) &&  (actor==player) && ((noun == I137_hockey_paddles) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_825, 825);
+    if (debug_rules) DB_Rule(R_826, 826);
     ! [2: say ~The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...~]
     say__p=1;! [3: ~The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though...~]
     ParaContent(); print "The pager lights up and says: Now you need something to hit.  The puck looks like a bar of soap though..."; new_line; .L_Say20; .L_SayX20;! [4: move paddles to player]
     MoveObject(I137_hockey_paddles, player, 0, false);
     RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_825, 825, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_826, 826, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of playing Machine1:
-[ R_829 ;
-    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I150_machine1) && (true))))) { ! Runs only when pattern matches
-    self = noun;
-    if (debug_rules) DB_Rule(R_829, 829);
-    ! [2: say ~You can't play the arcade machines as the power is turned off.  Shucks.~]
-    say__p=1;! [3: ~You can't play the arcade machines as the power is turned off.  Shucks.~]
-    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say21; .L_SayX21;RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_829, 829, 'action');
-    rfalse;
-];
-! No specific request
-! Instead of playing Machine2:
 [ R_830 ;
-    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I156_machine2) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I150_machine1) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_830, 830);
     ! [2: say ~You can't play the arcade machines as the power is turned off.  Shucks.~]
     say__p=1;! [3: ~You can't play the arcade machines as the power is turned off.  Shucks.~]
-    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say22; .L_SayX22;RulebookFails(); rtrue;
+    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say21; .L_SayX21;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_830, 830, 'action');
     rfalse;
 ];
 ! No specific request
-! Instead of playing Machine3:
+! Instead of playing Machine2:
 [ R_831 ;
-    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I157_machine3) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I156_machine2) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_831, 831);
     ! [2: say ~You can't play the arcade machines as the power is turned off.  Shucks.~]
     say__p=1;! [3: ~You can't play the arcade machines as the power is turned off.  Shucks.~]
-    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say23; .L_SayX23;RulebookFails(); rtrue;
+    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say22; .L_SayX22;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_831, 831, 'action');
     rfalse;
 ];
 ! No specific request
-! Instead of playing Machine4:
+! Instead of playing Machine3:
 [ R_832 ;
-    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I158_machine4) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I157_machine3) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_832, 832);
     ! [2: say ~You can't play the arcade machines as the power is turned off.  Shucks.~]
     say__p=1;! [3: ~You can't play the arcade machines as the power is turned off.  Shucks.~]
-    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say24; .L_SayX24;RulebookFails(); rtrue;
+    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say23; .L_SayX23;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_832, 832, 'action');
+    rfalse;
+];
+! No specific request
+! Instead of playing Machine4:
+[ R_833 ;
+    if ((((action ==##A81_playing) &&  (actor==player) && ((noun == I158_machine4) && (true))))) { ! Runs only when pattern matches
+    self = noun;
+    if (debug_rules) DB_Rule(R_833, 833);
+    ! [2: say ~You can't play the arcade machines as the power is turned off.  Shucks.~]
+    say__p=1;! [3: ~You can't play the arcade machines as the power is turned off.  Shucks.~]
+    ParaContent(); print "You can't play the arcade machines as the power is turned off.  Shucks."; new_line; .L_Say24; .L_SayX24;RulebookFails(); rtrue;
+    } else if (debug_rules > 1) DB_Rule(R_833, 833, 'action');
     rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -13454,40 +13469,34 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! After inserting quarter into Coin slot:
-[ R_828 ;
+[ R_829 ;
     if ((((action ==##Insert) &&  (actor==player) && ((noun == I149_quarter) && (true)) && ((second == I151_coin_slot) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_828, 828);
+    if (debug_rules) DB_Rule(R_829, 829);
     ! [2: now coin slot is open]
     (Adj_72_t2_v10(I151_coin_slot));
     ! [3: say ~It makes a clinking sound.~]
     say__p=1;! [4: ~It makes a clinking sound.~]
     ParaContent(); print "It makes a clinking sound."; new_line; .L_Say26; .L_SayX26;RulebookSucceeds(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_828, 828, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_829, 829, 'action');
     rfalse;
 ];
 ! No specific request
 ! After unlocking Electric Box with key:
-[ R_833 ;
+[ R_834 ;
     if ((((action ==##Unlock) &&  (actor==player) && ((noun == I142_electric_box) && (true)) && ((second == I141_key) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_833, 833);
-    ! [2: if player has puck]
-    if (((player == OwnerOf(I132_puck))))
-    {! [3: if player has paddles]
-        if (((player == OwnerOf(I137_hockey_paddles))))
-        {! [4: if player has quarter]
-            if (((player == OwnerOf(I149_quarter))))
-            {! [5: say ~You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!~]
-                say__p=1;! [6: ~You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!~]
-                ParaContent(); print "You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!"; new_line; .L_Say27; .L_SayX27;! [7: end the story finally]
-                deadflag=3; story_complete=true;
-                }
-                }
-                }
-                RulebookSucceeds(); rtrue;
-                } else if (debug_rules > 1) DB_Rule(R_833, 833, 'action');
-                rfalse;
+    if (debug_rules) DB_Rule(R_834, 834);
+    ! [2: if table1 is on]
+    if ((((Adj_87_t1_v10(I139_table1)))))
+    {! [3: say ~You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!~]
+        say__p=1;! [4: ~You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!~]
+        ParaContent(); print "You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!"; new_line; .L_Say27; .L_SayX27;! [5: end the story finally]
+        deadflag=3; story_complete=true;
+        }
+        RulebookSucceeds(); rtrue;
+        } else if (debug_rules > 1) DB_Rule(R_834, 834, 'action');
+        rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
 
@@ -20454,15 +20463,15 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Check inserting:
-[ R_827 ;
+[ R_828 ;
     if (actor == player) {
-    if (debug_rules) DB_Rule(R_827, 827);
+    if (debug_rules) DB_Rule(R_828, 828);
     ! [2: if player is not carrying quarter]
     if (((~~((player == CarrierOf(I149_quarter))))))
     {! [3: say ~You don't have a quarter.  I think there might be one near the arcade machines.~]
         say__p=1;! [4: ~You don't have a quarter.  I think there might be one near the arcade machines.~]
         ParaContent(); print "You don't have a quarter.  I think there might be one near the arcade machines."; new_line; .L_Say320; .L_SayX320;}
-        } else if (debug_rules > 1) DB_Rule(R_827, 827, 'actor');
+        } else if (debug_rules > 1) DB_Rule(R_828, 828, 'actor');
         rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -22651,13 +22660,21 @@ Constant B7_when_scene_ends = EMPTY_RULEBOOK;
     latest_rule_result-->0 = 0;
     if (original_deadflag ~= deadflag) return 0;
     if (say__p) RulebookParBreak(forbid_breaks);
-    rv = R_826();
+    rv = R_822();
     if (rv) {
         if (rv == 2) return reason_the_action_failed;
-        return R_826;
+        return R_822;
     }
     latest_rule_result-->0 = 0;
-    return 0; ! 2 rule(s)
+    if (original_deadflag ~= deadflag) return 0;
+    if (say__p) RulebookParBreak(forbid_breaks);
+    rv = R_827();
+    if (rv) {
+        if (rv == 2) return reason_the_action_failed;
+        return R_827;
+    }
+    latest_rule_result-->0 = 0;
+    return 0; ! 3 rule(s)
 ];
 [ B9_action_processing 
     forbid_breaks ! Implied call parameter
@@ -23078,14 +23095,6 @@ Constant B19_before = EMPTY_RULEBOOK;
     if (action == ##Take) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_822();
-        if (rv) {
-            if (rv == 2) return reason_the_action_failed;
-            return R_822;
-        }
-        latest_rule_result-->0 = 0;
-        if (original_deadflag ~= deadflag) return 0;
-        if (say__p) RulebookParBreak(forbid_breaks);
         rv = R_823();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
@@ -23108,18 +23117,18 @@ Constant B19_before = EMPTY_RULEBOOK;
             return R_825;
         }
         latest_rule_result-->0 = 0;
+        if (original_deadflag ~= deadflag) return 0;
+        if (say__p) RulebookParBreak(forbid_breaks);
+        rv = R_826();
+        if (rv) {
+            if (rv == 2) return reason_the_action_failed;
+            return R_826;
+        }
+        latest_rule_result-->0 = 0;
     } else {
         if (say__p) RulebookParBreak(forbid_breaks);
     }
     if (action == ##A81_playing) {
-        if (original_deadflag ~= deadflag) return 0;
-        if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_829();
-        if (rv) {
-            if (rv == 2) return reason_the_action_failed;
-            return R_829;
-        }
-        latest_rule_result-->0 = 0;
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
         rv = R_830();
@@ -23142,6 +23151,14 @@ Constant B19_before = EMPTY_RULEBOOK;
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
             return R_832;
+        }
+        latest_rule_result-->0 = 0;
+        if (original_deadflag ~= deadflag) return 0;
+        if (say__p) RulebookParBreak(forbid_breaks);
+        rv = R_833();
+        if (rv) {
+            if (rv == 2) return reason_the_action_failed;
+            return R_833;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -23210,10 +23227,10 @@ Constant B22_carry_out = EMPTY_RULEBOOK;
     if (action == ##Insert) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_828();
+        rv = R_829();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_828;
+            return R_829;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -23222,10 +23239,10 @@ Constant B22_carry_out = EMPTY_RULEBOOK;
     if (action == ##Unlock) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_833();
+        rv = R_834();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_833;
+            return R_834;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -26478,10 +26495,10 @@ Constant B370_report_placing = EMPTY_RULEBOOK;
     forbid_breaks ! Implied call parameter
     rv ! return value
     ;
-    rv = R_827();
+    rv = R_828();
     if (rv) {
         if (rv == 2) return reason_the_action_failed;
-        return R_827;
+        return R_828;
     }
     latest_rule_result-->0 = 0;
     return 0; ! 1 rule(s)
@@ -31201,18 +31218,19 @@ Array RulebookNames -->
         if (R == R_819) { print "Instead of playing Table1"; rtrue; } ! rule 367
         if (R == R_820) { print "An every turn rule"; rtrue; } ! rule 368
         if (R == R_821) { print "Instead of looking behind the redcounter"; rtrue; } ! rule 369
-        if (R == R_822) { print "Instead of taking Pager"; rtrue; } ! rule 370
-        if (R == R_823) { print "Instead of taking quarter"; rtrue; } ! rule 371
-        if (R == R_824) { print "Instead of taking puck"; rtrue; } ! rule 372
-        if (R == R_825) { print "Instead of taking paddles"; rtrue; } ! rule 373
-        if (R == R_826) { print "An every turn rule"; rtrue; } ! rule 374
-        if (R == R_827) { print "Check inserting"; rtrue; } ! rule 375
-        if (R == R_828) { print "After inserting quarter into Coin slot"; rtrue; } ! rule 376
-        if (R == R_829) { print "Instead of playing Machine1"; rtrue; } ! rule 377
-        if (R == R_830) { print "Instead of playing Machine2"; rtrue; } ! rule 378
-        if (R == R_831) { print "Instead of playing Machine3"; rtrue; } ! rule 379
-        if (R == R_832) { print "Instead of playing Machine4"; rtrue; } ! rule 380
-        if (R == R_833) { print "After unlocking Electric Box with key"; rtrue; } ! rule 381
+        if (R == R_822) { print "An every turn rule"; rtrue; } ! rule 370
+        if (R == R_823) { print "Instead of taking Pager"; rtrue; } ! rule 371
+        if (R == R_824) { print "Instead of taking quarter"; rtrue; } ! rule 372
+        if (R == R_825) { print "Instead of taking puck"; rtrue; } ! rule 373
+        if (R == R_826) { print "Instead of taking paddles"; rtrue; } ! rule 374
+        if (R == R_827) { print "An every turn rule"; rtrue; } ! rule 375
+        if (R == R_828) { print "Check inserting"; rtrue; } ! rule 376
+        if (R == R_829) { print "After inserting quarter into Coin slot"; rtrue; } ! rule 377
+        if (R == R_830) { print "Instead of playing Machine1"; rtrue; } ! rule 378
+        if (R == R_831) { print "Instead of playing Machine2"; rtrue; } ! rule 379
+        if (R == R_832) { print "Instead of playing Machine3"; rtrue; } ! rule 380
+        if (R == R_833) { print "Instead of playing Machine4"; rtrue; } ! rule 381
+        if (R == R_834) { print "After unlocking Electric Box with key"; rtrue; } ! rule 382
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -39526,7 +39544,7 @@ Verb meta 'tree'
                     ((
                         ((((((formal_par1 ofclass K1_room) && (formal_par1 ofclass K1_room))))) && ((
                         formal_rv = MapConnection(formal_par1,formal_par0)) | 1)
-                        )|| (ArgumentTypeFailed(14))
+                        )|| (ArgumentTypeFailed(16))
 
                     ))
                 +
@@ -41934,13 +41952,13 @@ Array TX_R_391 --> CONSTANT_PACKED_TEXT_STORAGE TX_R_391_R;
     ResponseViaActivity(R_274_RESP_A);
 ];
 [ R_TX_S_134 ;
-    #ifdef DEBUG; if (suppress_text_substitution) { print "~[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.~"; rtrue; }
+    #ifdef DEBUG; if (suppress_text_substitution) { print "~[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room has lots of arcade machines.  The air hockey table and food counter to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.~"; rtrue; }
     #endif; ! DEBUG
-    ! [1: ~[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.~]
+    ! [1: ~[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room has lots of arcade machines.  The air hockey table and food counter to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.~]
     say__p=1;! [2: if player is in main arcade room for the first time and the flashlight is switched on]
     ParaContent(); 
-    	if (~~((((TestSinglePastState(0, 0, false, 1) == 1 )) && ((((Adj_82_t1_v10(I127_flashlight)))))))) jump L_Say494;! [3: ~ This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. ~]
-    ParaContent(); print " This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. ";! [4: else if the player is in main arcade room more than once and flashlight is switched on]
+    	if (~~((((TestSinglePastState(0, 0, false, 1) == 1 )) && ((((Adj_82_t1_v10(I127_flashlight)))))))) jump L_Say494;! [3: ~ This large room has lots of arcade machines.  The air hockey table and food counter to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss. ~]
+    ParaContent(); print " This large room has lots of arcade machines.  The air hockey table and food counter to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss. ";! [4: else if the player is in main arcade room more than once and flashlight is switched on]
     ParaContent(); 
     	jump L_SayX492; .L_Say494; if (~~((((TestSinglePastState(0, 1, false, 1) > 1 )) && ((((Adj_82_t1_v10(I127_flashlight)))))))) jump L_Say495;! [5: ~Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.~]
     ParaContent(); print "Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times."; .L_Say495; .L_SayX492;rtrue;
@@ -51745,27 +51763,28 @@ Verb 'play'
 
 
 
-Constant TX_PS_99 = ">";
+Constant TX_PS_101 = ">";
 Constant TX_PS_3 = "A Retro Mystery.";
 Constant TX_PS_82 = "A bright, neon green and blue air hockey table.  It looks like it's still in a playable condition, but it's turned off.  If only you had the two paddles and a hockey puck, you could play it.  You look on the side to see that there is a coin slot that says ~25 cents required~.  It looks like you could put the paddles and puck on top of the table, and then put the quarter in the coin slot";
 Constant TX_PS_56 = "A buildup of many different small particles.  Pretty much expected in an abandoned building.";
 Constant TX_PS_76 = "A bunch of old, dusty cardboard boxes stacked in the corner.  They seem to make up the shape of a pyramid.  The boxes were placed with such effort and precision, it seems like it would be hiding something.";
 Constant TX_PS_48 = "A classic Pac-Man machine.  Hey, I used to play this at my local arcade!  It's covered in dust from the top to the bottom.  Hey, what's this next to the controls?";
-Constant TX_PS_98 = "A couple of garbage cans that are no longer in use.  They look pretty disgusting as it hasn't been touched in many, many years.";
-Constant TX_PS_94 = "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.";
+Constant TX_PS_100 = "A couple of garbage cans that are no longer in use.  They look pretty disgusting as it hasn't been touched in many, many years.";
+Constant TX_PS_96 = "A dark and dank back alley.  It seems really dirty and rats sneak in and out past garbage cans.";
 Constant TX_PS_70 = "A neon green air hockey puck.";
 Constant TX_PS_35 = "A new, ball point pen used for writing down notes.  Don't lose it!";
 Constant TX_PS_50 = "A normal quarter used to play games.";
 Constant TX_PS_68 = "A normal white sink with dust in the middle.  There seems to be...Oh hey it's the puck.  It looks like a bar of soap.";
 Constant TX_PS_78 = "A pair of air hockey paddles.  The white has faded, and has turned a brown shade.  There are scratches and dents from hitting the puck too hard.  The air hockey table must have been a popular game.";
-Constant TX_PS_101 = "A retro, mystery of an abandoned arcade.  You are a young, eager news reporter that is investigating an arcade.  Will you be able to find the missing pieces in order to turn on the power?";
+Constant TX_PS_103 = "A retro, mystery of an abandoned arcade.  You are a young, eager news reporter that is investigating an arcade.  Will you be able to find the missing pieces in order to turn on the power?";
 Constant TX_PS_88 = "A shiny, metal key that sparkles in your flashlight.  There is a little lightning bolt inscribed in the key.  It must mean power.";
 Constant TX_PS_41 = "A standard phone.  There is no real use for calling or texting anyone.";
 Constant TX_PS_4 = "Aaron Murai The story creation year is 2017";
 Constant TX_PS_69 = "Air Hockey Puck";
 Constant TX_PS_81 = "Air Hockey Table";
+Constant TX_PS_94 = "An retro poster advertising the ~amazing~ pizza they served.  Why wouldn't anyone take this?";
 Constant TX_PS_60 = "Another classic arcade game.  In fact, I have a Space Invader's alien sticker on my laptop at my office.  Nothing special seems to stick out.";
-Constant TX_PS_93 = "Back Alley";
+Constant TX_PS_95 = "Back Alley";
 Constant TX_PS_65 = "Bathroom";
 Constant TX_PS_75 = "Boxes";
 Constant TX_PS_83 = "Coin Slot";
@@ -51775,20 +51794,20 @@ Constant TX_PS_53 = "Dirt";
 Constant TX_PS_61 = "Donkey Kong";
 Constant TX_PS_62 = "Donkey Kong?!  This is where Mario first appeared.  Wow, the colors of the game used to pop off the screen.  Too bad it doesn't work.  Impressive for a game released in 1981.  Nothing special seems to stick out.";
 Constant TX_PS_55 = "Dust";
-Constant TX_PS_95 = "Electric Box";
+Constant TX_PS_97 = "Electric Box";
 Constant TX_PS_38 = "Flashlight";
 Constant TX_PS_85 = "Food Counter";
 Constant TX_PS_66 = "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.  There's only a sink in here as the toilets were destroyed.";
-Constant TX_PS_97 = "Garbage Cans";
+Constant TX_PS_99 = "Garbage Cans";
 Constant TX_PS_77 = "Hockey Paddles";
 Constant TX_PS_79 = "Hockey Table Room";
-Constant TX_PS_91 = "It isn't glowing right now but the reflection of your flashlight off the sign hits a shiny metal object behind the counter.  It looks like a key....";
+Constant TX_PS_92 = "It isn't glowing right now but the reflection of your flashlight off the sign hits a shiny metal object behind the counter.  It looks like a key....";
 Constant TX_PS_52 = "It's used to control Pac-Man.  There is a dusty quarter next to it.";
 Constant TX_PS_74 = "Just some portable, plastic tables.  These must've been used because they're easy to clean.  Understandable...";
 Constant TX_PS_87 = "Key";
 Constant TX_PS_44 = "Main Arcade Room";
-Constant TX_PS_100 = "Mystery";
-Constant TX_PS_90 = "Neon Sign";
+Constant TX_PS_102 = "Mystery";
+Constant TX_PS_91 = "Neon Sign";
 Constant TX_PS_36 = "Notepad";
 Constant TX_PS_64 = "One of the most recognizable games.  The colors have faded from the blocks on the side of the machine.  It's also covered in dust and spider webs.";
 Constant TX_PS_43 = "Outside the abandoned building, you don't know what to expect.  As long as you have your phone, pen and notepad, you'll be just fine.  Make sure you have some sort of light...";
@@ -51798,29 +51817,30 @@ Constant TX_PS_45 = "Pager";
 Constant TX_PS_71 = "Party Room";
 Constant TX_PS_34 = "Pen";
 Constant TX_PS_40 = "Phone";
-Constant TX_PS_92 = "Pizza Poster";
+Constant TX_PS_93 = "Pizza Poster";
 Constant TX_PS_73 = "Portable Tables";
-Constant TX_PS_105 = "QUIT";
+Constant TX_PS_107 = "QUIT";
 Constant TX_PS_49 = "Quarter";
-Constant TX_PS_102 = "RESTART";
-Constant TX_PS_103 = "RESTORE a saved game";
+Constant TX_PS_104 = "RESTART";
+Constant TX_PS_105 = "RESTORE a saved game";
 Constant TX_PS_54 = "Regular dirt from years of inactivity.  Pretty gross.";
 Constant TX_PS_2 = "Retro Arcade";
 Constant TX_PS_58 = "Some gross spider webs on top of the machines.  It's all over... Gross.";
 Constant TX_PS_59 = "Space Invaders";
 Constant TX_PS_57 = "Spider Webs";
 Constant TX_PS_63 = "Tetris";
-Constant TX_PS_96 = "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.";
+Constant TX_PS_98 = "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.";
 Constant TX_PS_46 = "The brightly lit green screen gives off some light.  Strange to find a working pager in an abandoned arcade.  Nevertheless, it seems useful.  Might as well take it.";
 Constant TX_PS_84 = "The coin slot for the air hockey table. Insert one quarter in coin slot to play air hockey. Only a quarter? What a deal!";
 Constant TX_PS_39 = "The flashlight from your phone.";
+Constant TX_PS_90 = "The paint is fading after years of use.";
 Constant TX_PS_80 = "This part of the Main Arcade Room must've been used for hockey table games.  The table is worn down and there are white marks, presumably from the paddles, on the sides.  It must've been very popular.";
 Constant TX_PS_86 = "This part of the Main Arcade Room was probably used to serve all the customers food like pizza, candy, and sodas.  The counter is painted bright red, and there is a bright blue neon sign on the wall saying, ~Food and Drink~, and a pizza poster.";
 Constant TX_PS_72 = "This was probably used to hold special party rooms.  There are portable tables set up and a couple boxes in the corner, but other than that, it's a plain room.  Wow, a birthday party in an arcade.  Must've been a 12 year old's dream.";
-Constant TX_PS_106 = "UNDO the last command";
+Constant TX_PS_108 = "UNDO the last command";
 Constant TX_PS_32 = "You are curious to see what lies in the abandoned building.  You brought your trusty phone, a pen and paper to jot down any thoughts you have.  As a young, and eager news reporter, this will be your first major scoop.  You can't mess this up!";
-Constant TX_PS_107 = "You can feel the excitement on your face as things are starting to get interesting.";
-Array TX_L_107 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_107;
+Constant TX_PS_109 = "You can feel the excitement on your face as things are starting to get interesting.";
+Array TX_L_109 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_109;
 Constant TX_PS_37 = "Your trusty notepad that you have used over the past year.  It's riddled with sketches, doodles, and useless notes from stories that didn't make the website.  But, things will change with this story!";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
@@ -51840,7 +51860,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_104 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_106 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_67 = "sink";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
@@ -59318,50 +59338,50 @@ Array BC_307 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_308 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_309 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_310 --> PACKED_TEXT_STORAGE TX_PS_89;
-Array BC_311 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_311 --> PACKED_TEXT_STORAGE TX_PS_90;
 Array BC_312 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_313 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_314 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_315 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_316 --> PACKED_TEXT_STORAGE TX_PS_90;
-Array BC_317 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_316 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_317 --> PACKED_TEXT_STORAGE TX_PS_92;
 Array BC_318 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_319 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_320 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_321 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_322 --> PACKED_TEXT_STORAGE TX_PS_92;
-Array BC_323 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_322 --> PACKED_TEXT_STORAGE TX_PS_93;
+Array BC_323 --> PACKED_TEXT_STORAGE TX_PS_94;
 Array BC_324 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_325 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_326 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_327 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_328 --> PACKED_TEXT_STORAGE TX_PS_93;
-Array BC_329 --> PACKED_TEXT_STORAGE TX_PS_94;
+Array BC_328 --> PACKED_TEXT_STORAGE TX_PS_95;
+Array BC_329 --> PACKED_TEXT_STORAGE TX_PS_96;
 Array BC_330 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_331 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_332 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_333 --> PACKED_TEXT_STORAGE TX_PS_95;
-Array BC_334 --> PACKED_TEXT_STORAGE TX_PS_96;
+Array BC_333 --> PACKED_TEXT_STORAGE TX_PS_97;
+Array BC_334 --> PACKED_TEXT_STORAGE TX_PS_98;
 Array BC_335 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_336 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_337 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_338 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_339 --> PACKED_TEXT_STORAGE TX_PS_97;
-Array BC_340 --> PACKED_TEXT_STORAGE TX_PS_98;
+Array BC_339 --> PACKED_TEXT_STORAGE TX_PS_99;
+Array BC_340 --> PACKED_TEXT_STORAGE TX_PS_100;
 Array BC_341 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_342 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_343 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_344 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_345 --> PACKED_TEXT_STORAGE TX_PS_99;
+Array BC_345 --> PACKED_TEXT_STORAGE TX_PS_101;
 Array BC_346 --> PACKED_TEXT_STORAGE TX_PS_4;
 Array BC_347 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_348 --> PACKED_TEXT_STORAGE TX_PS_100;
-Array BC_349 --> PACKED_TEXT_STORAGE TX_PS_101;
-Array BC_350 --> PACKED_TEXT_STORAGE TX_PS_102;
-Array BC_351 --> PACKED_TEXT_STORAGE TX_PS_103;
-Array BC_352 --> PACKED_TEXT_STORAGE TX_PS_104;
-Array BC_353 --> PACKED_TEXT_STORAGE TX_PS_105;
-Array BC_354 --> PACKED_TEXT_STORAGE TX_PS_106;
+Array BC_348 --> PACKED_TEXT_STORAGE TX_PS_102;
+Array BC_349 --> PACKED_TEXT_STORAGE TX_PS_103;
+Array BC_350 --> PACKED_TEXT_STORAGE TX_PS_104;
+Array BC_351 --> PACKED_TEXT_STORAGE TX_PS_105;
+Array BC_352 --> PACKED_TEXT_STORAGE TX_PS_106;
+Array BC_353 --> PACKED_TEXT_STORAGE TX_PS_107;
+Array BC_354 --> PACKED_TEXT_STORAGE TX_PS_108;
 
 
 

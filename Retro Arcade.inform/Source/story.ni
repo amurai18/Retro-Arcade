@@ -4,6 +4,8 @@ The story creation year is 2017.
 The story headline is "A Retro Mystery.". 
 The story genre is "Mystery". 
 The story description is "A retro, mystery of an abandoned arcade.  You are a young, eager news reporter that is investigating an arcade.  Will you be able to find the missing pieces in order to turn on the power?".
+Release along with an interpreter.
+Release along with the library card.
 [Navigation from Get that Cat]
 When play begins: 
 	now left hand status line is "Possible Exits: [exit list]"; 
@@ -78,7 +80,7 @@ Spawn is a room.
 Spawn is south of Main Arcade Room.
 The Main Arcade Room is dark.
 [Help from Mrs. Kiang]
-The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room includes the air hockey table and food counter.  But, they are to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss, and the employees room is to the west of the hockey table. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
+The description of the Main Arcade Room is "[if player is in Main Arcade room for the first time and the flashlight is switched on] This large room has lots of arcade machines.  The air hockey table and food counter to the northeast, and northwest.  In the front, there are many arcade machines, coated with dust, dirt, and spider webs.  The room lights up after being in the dark for so long.  You can picture kids and adults alike spending countless hours engaged in killing aliens, or stacking blocks.  The back alley is behind the hockey table and food counter.  You should probably find the power switch so you don't have to hold your flashlight the whole time.  While old and dusty, it seems as if people have broken in before to walk around and maybe even steal the arcade machines.  The bathroom is to the west, and a party room to the east, according to your boss. [else if the player is in Main Arcade room more than once and flashlight is switched on]Lots of dusty arcade machines around.  The whole room just gives off a classic, 80s vibe.  Oh boy, what simpler times.".
 Bathroom is west of Main Arcade Room. 
 Bathroom is dark.
 	The description of Bathroom is "For an abandonded building, the bathroom doesn't smell bad and it isn't very dirty.  Strange.  There's only a sink in here as the toilets were destroyed.".
@@ -192,10 +194,10 @@ An every turn rule:
 	if puck is on top of table1:
 		if paddles is on top of table1:
 			if quarter is in coin slot:
-				now Table1 is on;
-				say "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.";
-				 say "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...".
-
+				if player is in hockey table room: [since it's an every turn rule, it will say the dialouge every single turn, therefore a fix is to make it so that only in the hockey table room will it say the dialouge.]
+					now table1 is on;
+					say "The table seems like it would turn on now, but you remember there is no power supply for the table.  There must be a key that unlocks the Electric Box so you can turn on the power.";
+					say "The pager lights up and says: The electric box must be outside or in the back alley.  But, you can't open it without a key.  It must be where the employees work...".
 [Toggling is an action applying to one thing.
 Understand "toggle [something]" and "switch [something]" as toggling.
 Check toggling:
@@ -242,6 +244,7 @@ Understand "red counter" as redcounter.
 Understand "counter" as redcounter.
 Understand "the counter" as redcounter.
 Understand "bright red counter" as redcounter.
+The description of RedCounter is "The paint is fading after years of use.".
 
 NeonSign is scenery in Food Counter.
 The printed name of NeonSign is "Neon Sign".
@@ -251,12 +254,14 @@ Understand "neon" as neonsign.
 Understand "neonsign" as neonsign.
 The description of neonsign is "It isn't glowing right now but the reflection of your flashlight off the sign hits a shiny metal object behind the counter.  It looks like a key....".
 
-PizzaPoster is scenery in Food Counter.
+PizzaPoster is an object in Food Counter.
 The printed name of PizzaPoster is "Pizza Poster".
+PizzaPoster is not edible.
 Understand "poster" as pizzaposter.
 Understand "pizza poster" as pizzaposter.
 Understand "the poster" as pizzaposter.
 Understand "pizzaposter" as pizzaposter.
+The description of PizzaPoster is "An retro poster advertising the 'amazing' pizza they served.  Why wouldn't anyone take this?".
 
 Back Alley is northeast of Hockey Table Room.
 Back Alley is northwest of Food Counter.
@@ -268,6 +273,9 @@ Electric Box is locked and lockable.
 Electric Box is undescribed.
 Electric box is fixed in place.
 The description of electric box is "The box is currently locked, but it looks like a key will unlock it.  This serves as the main power.".  
+An every turn rule:
+	If table1 is on:
+		now Electric Box is described.
 
 GarbageCans is scenery in Back Alley.
 	The printed name of GarbageCans is "Garbage Cans".
@@ -418,14 +426,9 @@ Playing is an action applying to one thing.
 
 [End.  Player must have puck, paddles, and quarter, and then unlock the box with the key to win.]
 After unlocking Electric Box with key:
-	If player has puck:
-		If player has paddles:
-			If player has quarter:
-				say "You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
-				end the story finally.
-			
-
-
+	if table1 is on:
+		say "You turned the power on!  After that, everything else came to life and it was like you were a child again, spending a weekend grinding the machines.  Eventually, you quit your job as a reporter and aquired the arcade.  You run one of the most popular arcades in the city now.  Business is booming!";
+		end the story finally.
 [Fastest Way to win game]
 [turn on flashlight
  n
